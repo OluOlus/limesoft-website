@@ -10,7 +10,7 @@ const offices = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060d1a] border-t border-white/8">
+    <footer className="bg-[#060d1a] border-t border-white/10">
       <div className="h-px bg-gradient-to-r from-transparent via-cyan-neon/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-8">

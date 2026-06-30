@@ -51,7 +51,7 @@ export default function ContactPage() {
             </div>
 
             {/* Info — 5 cols */}
-            <div className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-white/8">
+            <div className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-white/10">
               <p className="text-white/30 text-[10px] tracking-[0.3em] uppercase mb-10">Direct Contact</p>
 
               <div className="space-y-10">
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-white/8">
+                <div className="pt-4 border-t border-white/10">
                   <p className="text-white/25 text-xs uppercase tracking-widest mb-6">Response Time</p>
                   <div className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-cyan-neon animate-pulse" />
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/8">
+                <div className="pt-4 border-t border-white/10">
                   <p className="text-white/25 text-xs uppercase tracking-widest mb-6">Offices</p>
                   <div className="space-y-6">
                     {offices.map(({ flag, country, city }) => (
@@ -121,7 +121,7 @@ export default function ContactPage() {
       <section className="py-20 bg-[#060d1a] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-white/25 text-[10px] tracking-[0.4em] uppercase mb-12">Our Locations</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
             {offices.map(({ flag, country, city, address, accent }) => (
               <div key={country} className="py-8 sm:px-8 first:pl-0 last:pr-0">
                 <div className="text-2xl mb-4">{flag}</div>
@@ -150,7 +150,7 @@ export default function ContactPage() {
               <Link
                 key={s.label}
                 href={s.href}
-                className="group flex items-center justify-between border border-white/8 px-6 py-5 hover:border-white/25 transition-colors"
+                className="group flex items-center justify-between border border-white/10 px-6 py-5 hover:border-white/25 transition-colors"
               >
                 <span className="text-white/60 text-sm font-medium group-hover:text-white transition-colors">
                   {s.label}

@@ -15,11 +15,11 @@ const config: Config = {
           800: '#0d1f3c',
           700: '#122848',
         },
-        'cyan-neon': '#14b8a6',
+        'cyan-neon': '#018ad8',
         cyan: {
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          neon: '#14b8a6',
+          400: '#38bdf8',
+          500: '#018ad8',
+          neon: '#018ad8',
         },
         purple: {
           neon: '#a855f7',
@@ -33,8 +33,8 @@ const config: Config = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #14b8a6 0%, #0ea5e9 60%, #2dd4bf 100%)',
-        'gradient-teal': 'linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%)',
+        'gradient-brand': 'linear-gradient(135deg, #018ad8 0%, #38bdf8 60%, #232a85 100%)',
+        'gradient-teal': 'linear-gradient(135deg, #018ad8 0%, #38bdf8 100%)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
@@ -51,8 +51,8 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         glowPulse: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(20,184,166,0.3)' },
-          '50%':       { boxShadow: '0 0 40px rgba(20,184,166,0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(1,138,216,0.3)' },
+          '50%':       { boxShadow: '0 0 40px rgba(1,138,216,0.6)' },
         },
       },
     },

@@ -42,14 +42,7 @@ const process = [
   { step: '04', title: 'Support',   desc: 'Ongoing managed services, monitoring, and advisory to keep you secure and optimised.' },
 ]
 
-const projects = [
-  { client: 'Novare Africa',      service: 'Cybersecurity',    headline: 'Next-Gen Firewall Refresh' },
-  { client: 'Elysium Diem',       service: 'Infrastructure',   headline: 'SD-WLAN for 30+ Offices' },
-  { client: 'Jott Limited',       service: 'Managed Services', headline: 'Managed Networks & Firewall' },
-  { client: 'Rocksteady Studios', service: 'Applications',     headline: 'Cloud & Application Services' },
-]
-
-function SectionLabel({ text, color = '#14b8a6' }: { text: string; color?: string }) {
+function SectionLabel({ text, color = '#018ad8' }: { text: string; color?: string }) {
   return (
     <div className="flex items-center gap-3 mb-4">
       <span className="w-8 h-px" style={{ background: color }} />
@@ -137,7 +130,7 @@ export default function HomePage() {
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {differentiators.map((d) => (
               <StaggerItem key={d.num}>
-                <div className="group h-full p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all duration-300">
+                <div className="group h-full p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all duration-300">
                   <div className="text-white/10 text-4xl font-black mb-4 leading-none group-hover:text-white/20 transition-colors">{d.num}</div>
                   <h3 className="text-white font-bold mb-2 group-hover:text-cyan-neon transition-colors">{d.title}</h3>
                   <p className="text-white/45 text-sm leading-relaxed">{d.desc}</p>
@@ -163,7 +156,7 @@ export default function HomePage() {
                     <div className="hidden lg:block absolute top-7 left-full w-full h-px bg-gray-200 z-0" />
                   )}
                   <div className="relative z-10">
-                    <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/8 flex items-center justify-center mb-5">
+                    <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/10 flex items-center justify-center mb-5">
                       <span className="text-teal-600 font-black text-sm">{p.step}</span>
                     </div>
                     <h3 className="text-gray-900 font-bold text-lg mb-2">{p.title}</h3>
@@ -176,38 +169,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. REFERENCE PROJECTS */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal className="flex items-end justify-between mb-14 gap-6">
-            <div>
-              <SectionLabel text="Our Work" />
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Reference Projects</h2>
-            </div>
-            <Link href="/services" className="hidden md:inline text-white/30 text-xs font-semibold tracking-widest uppercase hover:text-cyan-neon transition-colors shrink-0">
-              All Services →
-            </Link>
-          </ScrollReveal>
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projects.map((p) => (
-              <StaggerItem key={p.client}>
-                <div className="group h-full p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-cyan-neon/20 hover:-translate-y-1 transition-all duration-300">
-                  <p className="text-cyan-neon text-[11px] font-black tracking-[0.3em] uppercase mb-4">{p.service}</p>
-                  <p className="text-white/25 text-xs mb-2">{p.client}</p>
-                  <h3 className="text-white font-bold leading-snug">{p.headline}</h3>
-                  <div className="mt-6 h-px w-8 bg-cyan-neon/40 group-hover:w-16 transition-all duration-500" />
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* 9. FINAL CTA */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-neon/5 via-transparent to-sky-500/5 backdrop-blur-sm" />
-        <div className="absolute inset-0 border-y border-white/8" />
-        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(20,184,166,0.45), transparent)' }} />
+        <div className="absolute inset-0 border-y border-white/10" />
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(1, 138, 216,0.45), transparent)' }} />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
@@ -220,7 +186,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact"
-                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(20,184,166,0.35)] transition-shadow duration-300">
+                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(1,138,216,0.35)] transition-shadow duration-300">
                 <span className="relative z-10">Talk to an Expert</span>
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
               </Link>

@@ -85,9 +85,9 @@ function OrbitalVisual() {
         <defs>
           {/* Outer ring: teal comet sweep */}
           <linearGradient id="g-outer" x1={CX} y1={CY - R1} x2={CX} y2={CY + R1} gradientUnits="userSpaceOnUse">
-            <stop offset="0%"   stopColor="#14b8a6" stopOpacity="1"/>
-            <stop offset="50%"  stopColor="#14b8a6" stopOpacity="0.12"/>
-            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0"/>
+            <stop offset="0%"   stopColor="#018ad8" stopOpacity="1"/>
+            <stop offset="50%"  stopColor="#018ad8" stopOpacity="0.12"/>
+            <stop offset="100%" stopColor="#018ad8" stopOpacity="0"/>
           </linearGradient>
 
           {/* Second outer: sky-blue, faster */}
@@ -112,7 +112,7 @@ function OrbitalVisual() {
 
         {/* Static guide rings */}
         <circle cx={CX} cy={CY} r={R1 + 28} fill="none" stroke="rgba(255,255,255,0.025)" strokeWidth="1"/>
-        <circle cx={CX} cy={CY} r={R1}       fill="none" stroke="rgba(20,184,166,0.1)"    strokeWidth="1"/>
+        <circle cx={CX} cy={CY} r={R1}       fill="none" stroke="rgba(1, 138, 216,0.1)"    strokeWidth="1"/>
         <circle cx={CX} cy={CY} r={R2}       fill="none" stroke="rgba(56,189,248,0.1)"    strokeWidth="1"/>
 
         {/* Outer ring: teal CW 13 s */}
@@ -120,8 +120,8 @@ function OrbitalVisual() {
           animate={{ rotate: 360 }}
           transition={{ duration: 13, repeat: Infinity, ease: 'linear' }}>
           <circle cx={CX} cy={CY} r={R1} fill="none" stroke="url(#g-outer)" strokeWidth="2"/>
-          <circle cx={CX} cy={CY - R1} r={5.5} fill="#14b8a6" opacity="0.95"/>
-          <circle cx={CX} cy={CY - R1} r={11}  fill="#14b8a6" opacity="0.15"/>
+          <circle cx={CX} cy={CY - R1} r={5.5} fill="#018ad8" opacity="0.95"/>
+          <circle cx={CX} cy={CY - R1} r={11}  fill="#018ad8" opacity="0.15"/>
         </motion.g>
 
         {/* Second outer: sky-blue CW 6.5 s */}
@@ -150,15 +150,15 @@ function OrbitalVisual() {
         {/* Radial gradient def for centre glow (must be after first use to avoid hoisting issues — put in defs) */}
         <defs>
           <radialGradient id="centre-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="#14b8a6" stopOpacity="0.14"/>
+            <stop offset="0%"   stopColor="#018ad8" stopOpacity="0.14"/>
             <stop offset="50%"  stopColor="#38bdf8" stopOpacity="0.06"/>
-            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0"/>
+            <stop offset="100%" stopColor="#018ad8" stopOpacity="0"/>
           </radialGradient>
 
           {/* Pulsing outer halo */}
           <radialGradient id="outer-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="#14b8a6" stopOpacity="0.05"/>
-            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0"/>
+            <stop offset="0%"   stopColor="#018ad8" stopOpacity="0.05"/>
+            <stop offset="100%" stopColor="#018ad8" stopOpacity="0"/>
           </radialGradient>
         </defs>
 
@@ -171,8 +171,8 @@ function OrbitalVisual() {
 
       {/* Orbiting label pills — tied to their respective rings */}
       {/* Outer ring (teal, CW 13 s): Cybersecurity starts top, Managed Services starts bottom */}
-      <OrbitLabel label="Cybersecurity"    color="#14b8a6" radius={182} startAngle={0}   duration={13} />
-      <OrbitLabel label="Managed Services" color="#14b8a6" radius={182} startAngle={180} duration={13} />
+      <OrbitLabel label="Cybersecurity"    color="#018ad8" radius={182} startAngle={0}   duration={13} />
+      <OrbitLabel label="Managed Services" color="#018ad8" radius={182} startAngle={180} duration={13} />
       {/* Inner ring (sky-blue, CCW 9 s): Infrastructure starts right, Cloud & Apps starts left */}
       <OrbitLabel label="Infrastructure"   color="#38bdf8" radius={138} startAngle={90}  duration={9}  ccw />
       <OrbitLabel label="Cloud & Apps"     color="#38bdf8" radius={138} startAngle={270} duration={9}  ccw />
@@ -182,7 +182,7 @@ function OrbitalVisual() {
         {/* Soft teal halo behind shield */}
         <div className="absolute rounded-full" style={{
           width: 230, height: 230,
-          background: 'radial-gradient(circle, rgba(20,184,166,0.2) 0%, rgba(56,189,248,0.07) 55%, transparent 75%)',
+          background: 'radial-gradient(circle, rgba(1, 138, 216,0.2) 0%, rgba(56,189,248,0.07) 55%, transparent 75%)',
           filter: 'blur(22px)',
         }}/>
 
@@ -199,7 +199,7 @@ function OrbitalVisual() {
             }}
             style={{
               transformStyle: 'preserve-3d',
-              filter: 'drop-shadow(0 0 32px rgba(20,184,166,0.55)) drop-shadow(0 10px 28px rgba(0,0,0,0.5))',
+              filter: 'drop-shadow(0 0 32px rgba(1, 138, 216,0.55)) drop-shadow(0 10px 28px rgba(0,0,0,0.5))',
             }}
           >
             <Image
@@ -249,7 +249,7 @@ export default function ParallaxHero() {
         {/* Teal glow: subtle, behind orbital ring area */}
         <div className="absolute top-[15%] right-[5%] w-[500px] h-[500px] rounded-full pointer-events-none"
           style={{
-            background: 'radial-gradient(circle, rgba(20,184,166,0.07) 0%, transparent 65%)',
+            background: 'radial-gradient(circle, rgba(1, 138, 216,0.07) 0%, transparent 65%)',
             filter: 'blur(80px)',
           }}/>
 
@@ -276,7 +276,7 @@ export default function ParallaxHero() {
             <motion.div
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-cyan-neon/25 bg-cyan-neon/8 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-cyan-neon/25 bg-cyan-neon/10 backdrop-blur-sm"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-neon"/>
               <span className="text-cyan-neon text-xs font-semibold tracking-widest uppercase">
@@ -309,7 +309,7 @@ export default function ParallaxHero() {
               className="flex flex-wrap gap-4 mb-12"
             >
               <Link href="/contact"
-                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-8 py-3.5 text-sm tracking-wide hover:shadow-[0_0_32px_rgba(20,184,166,0.4)] transition-shadow duration-300">
+                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-8 py-3.5 text-sm tracking-wide hover:shadow-[0_0_32px_rgba(1,138,216,0.4)] transition-shadow duration-300">
                 <span className="relative z-10">Talk to an Expert</span>
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300"/>
               </Link>

@@ -54,7 +54,7 @@ function ServiceRow({ s }: { s: typeof services[0] }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <span className="text-white/12 text-xs font-mono w-8 shrink-0">{s.num}</span>
+      <span className="text-white/10 text-xs font-mono w-8 shrink-0">{s.num}</span>
       <div className="flex-1 md:grid md:grid-cols-12 md:gap-8 md:items-center">
         <div className="md:col-span-4">
           <h3
@@ -95,7 +95,7 @@ function ServiceRow({ s }: { s: typeof services[0] }) {
 
 export default function ServicesList() {
   return (
-    <div className="divide-y divide-white/6">
+    <div className="divide-y divide-white/5">
       {services.map((s) => (
         <ScrollReveal key={s.num}>
           <ServiceRow s={s} />

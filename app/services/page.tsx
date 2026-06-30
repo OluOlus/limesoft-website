@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Carousel from '@/components/Carousel'
 
 export const metadata: Metadata = {
   title: 'Services | Limesoft System',
@@ -11,7 +12,7 @@ const services = [
   {
     id: 'cybersecurity',
     num: '01',
-    accent: '#14b8a6',
+    accent: '#018ad8',
     label: 'Cybersecurity',
     headline: 'Protect Your Critical Assets',
     subline: 'Confidentiality. Integrity. Availability.',
@@ -30,11 +31,6 @@ const services = [
       { name: 'Cloud Security',            desc: 'Secure cloud workloads on AWS and Azure with native and third-party security controls.' },
     ],
     partners: ['Sophos', 'Palo Alto Networks', 'Fortinet', 'Cisco', 'ISC2'],
-    project: {
-      client: 'Novare Africa',
-      headline: 'Next-Generation Firewall Refresh',
-      desc: 'Design, implementation, and support of a Secure Network Perimeter Solution using Sophos XGS Series Next-Generation Firewall — protecting enterprise critical assets across multiple sites.',
-    },
   },
   {
     id: 'infrastructure',
@@ -58,16 +54,11 @@ const services = [
       { name: 'Network Automation',      desc: 'Python, Ansible, and Cisco DevNet tooling to automate repetitive infrastructure tasks.' },
     ],
     partners: ['Cisco', 'HPE', 'AWS', 'Microsoft Azure', 'F5', 'Juniper', 'UniFi'],
-    project: {
-      client: 'Elysium Diem',
-      headline: 'SD-WLAN Across 30+ Offices',
-      desc: 'Design, implementation, and support of a UniFi Software Defined Wireless-LAN solution rolled out across 30+ offices serving over 400 users — delivering unified visibility, policy control, and seamless roaming.',
-    },
   },
   {
     id: 'applications',
     num: '03',
-    accent: '#14b8a6',
+    accent: '#018ad8',
     label: 'Applications',
     headline: 'Software That Drives Productivity',
     subline: 'Custom-Built. Enterprise-Grade. Impactful.',
@@ -86,11 +77,6 @@ const services = [
       { name: 'Legacy Modernisation',    desc: 'Refactoring and re-platforming of legacy systems to modern, maintainable architectures.' },
     ],
     partners: ['AWS', 'Microsoft Azure', 'Cisco DevNet'],
-    project: {
-      client: 'Rocksteady Studios',
-      headline: 'Cloud & Application Services',
-      desc: 'End-to-end cloud and application services — design, implementation, and sustained support enabling seamless digital delivery and operations for a creative technology studio.',
-    },
   },
   {
     id: 'services',
@@ -114,11 +100,6 @@ const services = [
       { name: 'SLA-backed Support',     desc: 'Defined response times and escalation paths — you always know who to call.' },
     ],
     partners: ['Sophos', 'Cisco', 'Fortinet'],
-    project: {
-      client: 'Jott Limited',
-      headline: 'Managed Networks & Firewall',
-      desc: 'Ongoing managed network and firewall services, technical advisory and consultancy — keeping infrastructure secure, available, and performant as a continuously evolving managed service.',
-    },
   },
 ]
 
@@ -136,7 +117,7 @@ export default function ServicesPage() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.02] tracking-tight mb-8 max-w-4xl">
             Intelligent Technology for Every Challenge
           </h1>
-          <p className="text-gray-500 text-lg max-w-2xl leading-relaxed">
+          <p className="text-gray-600 text-lg max-w-2xl leading-relaxed">
             From cybersecurity and infrastructure to custom software and managed services — certified experts,
             proven methodology, and a commitment to your success.
           </p>
@@ -144,7 +125,7 @@ export default function ServicesPage() {
           <div className="mt-12 flex flex-wrap gap-4">
             {services.map((s) => (
               <a key={s.id} href={`#${s.id}`}
-                className="text-xs font-semibold tracking-widest uppercase border border-slate-200 text-gray-500 px-4 py-2 bg-white hover:border-cyan-neon/50 hover:text-cyan-neon transition-colors">
+                className="text-xs font-semibold tracking-widest uppercase border border-slate-200 text-gray-600 px-4 py-2 bg-white hover:border-cyan-neon/50 hover:text-cyan-neon transition-colors">
                 {s.label}
               </a>
             ))}
@@ -165,7 +146,7 @@ export default function ServicesPage() {
                   {s.label}
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{s.headline}</h2>
-                <p className="text-gray-400 text-sm">{s.subline}</p>
+                <p className="text-gray-500 text-sm">{s.subline}</p>
               </div>
             </div>
 
@@ -174,30 +155,20 @@ export default function ServicesPage() {
               {/* Description */}
               <div className="lg:col-span-4 space-y-8">
                 {s.description.map((para, j) => (
-                  <p key={j} className="text-gray-500 leading-relaxed">{para}</p>
+                  <p key={j} className="text-gray-600 leading-relaxed">{para}</p>
                 ))}
 
                 {/* Partners */}
                 <div className="pt-4">
-                  <p className="text-gray-400 text-[10px] tracking-[0.3em] uppercase mb-3">Technology Partners</p>
+                  <p className="text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-3">Technology Partners</p>
                   <div className="flex flex-wrap gap-2">
                     {s.partners.map((p) => (
                       <span key={p}
-                        className="px-3 py-1.5 border border-slate-200 text-gray-400 text-xs bg-white hover:text-gray-700 hover:border-gray-300 transition-colors cursor-default">
+                        className="px-3 py-1.5 border border-slate-200 text-gray-500 text-xs bg-white hover:text-gray-700 hover:border-gray-300 transition-colors cursor-default">
                         {p}
                       </span>
                     ))}
                   </div>
-                </div>
-
-                {/* Reference project */}
-                <div className="mt-6 pt-6 border-t border-slate-200/60">
-                  <p className="text-[10px] font-bold tracking-[0.3em] uppercase mb-3" style={{ color: s.accent }}>
-                    Reference Project
-                  </p>
-                  <p className="text-gray-400 text-xs mb-2">{s.project.client}</p>
-                  <h4 className="text-gray-900 font-semibold mb-3">{s.project.headline}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.project.desc}</p>
                 </div>
 
                 <Link href="/contact"
@@ -207,21 +178,21 @@ export default function ServicesPage() {
                 </Link>
               </div>
 
-              {/* Capabilities grid */}
+              {/* Capabilities carousel */}
               <div className="lg:col-span-8">
-                <p className="text-gray-400 text-[10px] tracking-[0.3em] uppercase mb-8">Capabilities</p>
-                <div className="grid sm:grid-cols-2 gap-px bg-gray-100">
+                <p className="text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-8">Capabilities</p>
+                <Carousel theme="light">
                   {s.capabilities.map((cap) => (
                     <div key={cap.name}
-                      className={`p-6 ${i % 2 === 0 ? 'bg-white' : 'bg-[#f4f7fa]'} hover:bg-[#f0fdfa] transition-colors group`}>
+                      className="h-full p-6 rounded-xl border border-slate-200/60 bg-white hover:border-cyan-neon/40 hover:bg-[#f0fdfa] transition-colors group">
                       <div className="flex items-center gap-2 mb-3">
                         <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.accent }} />
                         <h4 className="text-gray-900 text-sm font-semibold">{cap.name}</h4>
                       </div>
-                      <p className="text-gray-400 text-xs leading-relaxed">{cap.desc}</p>
+                      <p className="text-gray-500 text-xs leading-relaxed">{cap.desc}</p>
                     </div>
                   ))}
-                </div>
+                </Carousel>
               </div>
             </div>
           </div>
@@ -235,18 +206,18 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Not sure which service you need?
             </h2>
-            <p className="text-gray-500 leading-relaxed max-w-lg">
+            <p className="text-gray-600 leading-relaxed max-w-lg">
               Our experts will assess your environment and recommend the right solution.
               No commitment required — just an honest conversation.
             </p>
           </div>
           <div className="flex flex-col gap-3 shrink-0">
             <Link href="/contact"
-              className="bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all duration-200 text-center">
+              className="bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:shadow-[0_0_30px_rgba(1,138,216,0.3)] transition-all duration-200 text-center">
               Book a Free Consultation
             </Link>
             <Link href="/about"
-              className="border border-slate-200 text-gray-500 font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:border-gray-400 hover:text-gray-800 transition-colors duration-200 text-center">
+              className="border border-slate-200 text-gray-600 font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:border-gray-400 hover:text-gray-800 transition-colors duration-200 text-center">
               Learn About Our Team
             </Link>
           </div>

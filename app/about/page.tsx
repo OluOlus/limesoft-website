@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Carousel from '@/components/Carousel'
 
 export const metadata: Metadata = {
   title: 'About Us | Limesoft System',
@@ -7,8 +8,26 @@ export const metadata: Metadata = {
     'Learn about Limesoft System — cybersecurity and IT solutions firm with offices in Nigeria, UK, Cameroon, and Rwanda.',
 }
 
+const coreValues = [
+  {
+    num: '01',
+    title: 'Innovation & Excellence',
+    desc: 'We continually embrace change and explore new ideas — staying at the forefront of technology so our clients benefit from the best that the industry has to offer, delivered with precision.',
+  },
+  {
+    num: '02',
+    title: 'Integrity',
+    desc: 'We act with Honesty, Transparency, and Accountability in every interaction. Our clients trust us with their critical infrastructure — we take that responsibility seriously and hold ourselves to the highest ethical standards.',
+  },
+  {
+    num: '03',
+    title: 'Customer Obsession',
+    desc: 'Our customers are the heart of everything we do. We measure our success by theirs — from the first scoping call to long-term managed service partnerships and beyond.',
+  },
+]
+
 const certifications = [
-  { group: 'Infrastructure', accent: '#14b8a6', items: ['CCNP Enterprise Infrastructure', 'JNCIA — JUNOS, Cloud, Mist AI', 'JNCIS-SP', 'Azure & AWS Certified SA', 'NSE 1–3', 'F5-CA'] },
+  { group: 'Infrastructure', accent: '#018ad8', items: ['CCNP Enterprise Infrastructure', 'JNCIA — JUNOS, Cloud, Mist AI', 'JNCIS-SP', 'Azure & AWS Certified SA', 'NSE 1–3', 'F5-CA'] },
   { group: 'Cybersecurity',  accent: '#0d9488', items: ['CCNP Security', 'ISC2', 'Sophos CSP', 'Sophos Certified Architect', 'NSE 4', 'PCNSA', 'PCNSE'] },
   { group: 'Applications',   accent: '#38bdf8', items: ['Web & App Development', 'Cisco Certified DevNet Associate'] },
   { group: 'Services',       accent: '#64748b', items: ['CCNA', 'Sophos Certified Technician', 'PMP', 'ITIL v4', 'PRINCE2'] },
@@ -123,33 +142,15 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-800">Our Foundation</h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200/60">
-            <div className="py-10 md:pr-12">
-              <div className="text-6xl font-black text-slate-200 mb-4 leading-none">01</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Innovation &amp; Excellence</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We continually embrace change and explore new ideas — staying at the forefront of technology
-                so our clients benefit from the best that the industry has to offer, delivered with precision.
-              </p>
-            </div>
-            <div className="py-10 md:px-12">
-              <div className="text-6xl font-black text-slate-200 mb-4 leading-none">02</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Integrity</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We act with Honesty, Transparency, and Accountability in every interaction.
-                Our clients trust us with their critical infrastructure — we take that responsibility seriously
-                and hold ourselves to the highest ethical standards.
-              </p>
-            </div>
-            <div className="py-10 md:pl-12">
-              <div className="text-6xl font-black text-slate-200 mb-4 leading-none">03</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Customer Obsession</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our customers are the heart of everything we do. We measure our success by theirs —
-                from the first scoping call to long-term managed service partnerships and beyond.
-              </p>
-            </div>
-          </div>
+          <Carousel theme="light">
+            {coreValues.map((v) => (
+              <div key={v.num} className="h-full p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-cyan-neon/40 hover:shadow-lg transition-all duration-300">
+                <div className="text-6xl font-black text-slate-200 mb-4 leading-none">{v.num}</div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">{v.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </Carousel>
         </div>
       </section>
 
@@ -229,16 +230,16 @@ export default function AboutPage() {
             <span className="text-cyan-neon text-xs font-semibold tracking-[0.3em] uppercase">Global Presence</span>
           </span>
           <h2 className="text-4xl font-bold text-gray-800 mb-16">Our Digital Footprint</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-200/60">
+          <Carousel theme="light">
             {offices.map(({ flag, country, city, address }) => (
-              <div key={country} className="py-8 sm:px-8 first:pl-0 last:pr-0">
+              <div key={country} className="h-full p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-cyan-neon/40 hover:shadow-lg transition-all duration-300">
                 <div className="text-3xl mb-5">{flag}</div>
                 <p className="text-gray-800 font-bold mb-1">{country}</p>
                 <p className="text-cyan-neon text-xs font-semibold mb-3">{city}</p>
-                <p className="text-gray-500 text-xs leading-relaxed">{address}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{address}</p>
               </div>
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
@@ -249,10 +250,10 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
               Ready to transform your digital estate?
             </h2>
-            <p className="text-gray-500 text-sm">Let&apos;s start the conversation.</p>
+            <p className="text-gray-600 text-sm">Let&apos;s start the conversation.</p>
           </div>
           <Link href="/contact"
-            className="shrink-0 bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl tracking-wide hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all duration-200">
+            className="shrink-0 bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl tracking-wide hover:shadow-[0_0_30px_rgba(1,138,216,0.3)] transition-all duration-200">
             Contact Us
           </Link>
         </div>

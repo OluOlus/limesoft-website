@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 const AUTHORS = {
-  adewale: { name: 'Adewale',     role: 'Network Engineer', initials: 'AD', color: '#14b8a6' },
+  adewale: { name: 'Adewale',     role: 'Network Engineer', initials: 'AD', color: '#018ad8' },
   olu:     { name: 'Olu Oluseki', role: 'Cloud & DevOps',   initials: 'OO', color: '#38bdf8' },
 }
 
@@ -20,21 +20,21 @@ const featured = {
   excerpt:
     'The traditional "castle and moat" approach to network security is obsolete. With hybrid workforces, multi-cloud environments, and increasingly sophisticated threat actors, organisations need a fundamentally different model. Zero Trust — "never trust, always verify" — is not just a buzzword. It is a survival strategy for modern enterprises.',
   href: '/resources/zero-trust-architecture',
-  accent: '#14b8a6',
+  accent: '#018ad8',
   author: AUTHORS.adewale,
 }
 
 const articles = [
-  { category: 'Cybersecurity',         readTime: '9 min read', date: 'January 2026',  title: 'Cybersecurity Compliance in 2025–2026: NDPC, GDPR, and What African Businesses Must Know',         excerpt: "With Nigeria's Data Protection Commission actively enforcing the NDPA and UK/EU-based operations subject to GDPR, the compliance landscape is increasingly complex. We break it down into actionable steps — from data mapping and consent management to breach notification obligations and cross-border data transfer rules.",      href: '/resources/cybersecurity-compliance-2026',     accent: '#14b8a6', author: AUTHORS.adewale },
+  { category: 'Cybersecurity',         readTime: '9 min read', date: 'January 2026',  title: 'Cybersecurity Compliance in 2025–2026: NDPC, GDPR, and What African Businesses Must Know',         excerpt: "With Nigeria's Data Protection Commission actively enforcing the NDPA and UK/EU-based operations subject to GDPR, the compliance landscape is increasingly complex. We break it down into actionable steps — from data mapping and consent management to breach notification obligations and cross-border data transfer rules.",      href: '/resources/cybersecurity-compliance-2026',     accent: '#018ad8', author: AUTHORS.adewale },
   { category: 'Infrastructure',        readTime: '7 min read', date: 'November 2025', title: 'AI-Ready Infrastructure: Preparing Your Data Centre for the Intelligence Era',                         excerpt: 'As AI workloads demand low-latency compute, high-bandwidth fabric, and intelligent storage, traditional data centre architectures are struggling to keep pace. GPU clusters, NVMe-over-Fabrics, and liquid cooling are no longer niche requirements — they are the new baseline. Here is what you need to build a future-proof foundation.',  href: '/resources/ai-ready-infrastructure',           accent: '#38bdf8', author: AUTHORS.olu },
   { category: 'Digital Transformation',readTime: '7 min read', date: 'August 2025',   title: 'Digital Transformation Roadmap for African Enterprises in 2025',                                       excerpt: "Africa's digital economy is growing faster than any other region. For enterprises across Nigeria, Rwanda, Cameroon, and beyond, digital transformation is no longer optional — it is the competitive frontier. We outline a practical roadmap: from connectivity and cloud adoption to security-first architecture and talent development.",  href: '/resources/africa-digital-transformation-2025',accent: '#38bdf8', author: AUTHORS.olu },
-  { category: 'Cloud',                 readTime: '6 min read', date: 'May 2025',      title: 'AWS vs Azure: Choosing the Right Cloud Platform for Your Business',                                     excerpt: 'Both AWS and Microsoft Azure are enterprise-grade cloud platforms — but they serve different strengths. AWS leads in breadth of services and startup ecosystems; Azure excels in hybrid environments and Microsoft-stack integration. Understanding the differences before you migrate can save months of re-architecture and significant cost.', href: '/resources/aws-vs-azure-guide',                accent: '#14b8a6', author: AUTHORS.olu },
+  { category: 'Cloud',                 readTime: '6 min read', date: 'May 2025',      title: 'AWS vs Azure: Choosing the Right Cloud Platform for Your Business',                                     excerpt: 'Both AWS and Microsoft Azure are enterprise-grade cloud platforms — but they serve different strengths. AWS leads in breadth of services and startup ecosystems; Azure excels in hybrid environments and Microsoft-stack integration. Understanding the differences before you migrate can save months of re-architecture and significant cost.', href: '/resources/aws-vs-azure-guide',                accent: '#018ad8', author: AUTHORS.olu },
   { category: 'Infrastructure',        readTime: '6 min read', date: 'January 2025',  title: 'The Rise of SD-WAN: How Software-Defined Networking Is Transforming the Enterprise Edge',             excerpt: 'Software-Defined WAN is reshaping how enterprises connect branch offices, cloud services, and remote workers. For organisations with distributed operations — particularly those with pan-African or cross-continental presence — SD-WAN delivers the agility, visibility, and cost savings that MPLS-only networks cannot.',                 href: '/resources/sd-wan-enterprise-networking',      accent: '#38bdf8', author: AUTHORS.adewale },
-  { category: 'Cybersecurity',         readTime: '7 min read', date: 'October 2024',  title: 'Next-Generation Firewalls Explained: What Makes NGFW Different and Why It Matters',                   excerpt: 'Traditional firewalls filter traffic by port and protocol. Next-Generation Firewalls go further — inspecting application-layer traffic, integrating live threat intelligence feeds, enforcing identity-based policies, and providing SSL/TLS decryption. We compare leading NGFW vendors and explain what to look for in your next procurement.', href: '/resources/ngfw-explained',                    accent: '#14b8a6', author: AUTHORS.adewale },
+  { category: 'Cybersecurity',         readTime: '7 min read', date: 'October 2024',  title: 'Next-Generation Firewalls Explained: What Makes NGFW Different and Why It Matters',                   excerpt: 'Traditional firewalls filter traffic by port and protocol. Next-Generation Firewalls go further — inspecting application-layer traffic, integrating live threat intelligence feeds, enforcing identity-based policies, and providing SSL/TLS decryption. We compare leading NGFW vendors and explain what to look for in your next procurement.', href: '/resources/ngfw-explained',                    accent: '#018ad8', author: AUTHORS.adewale },
   { category: 'Applications',          readTime: '5 min read', date: 'July 2024',     title: 'Build vs Buy: A Decision Framework for Enterprise Software in 2024',                                    excerpt: "One of the most consequential technology decisions an organisation makes is whether to build custom software or deploy an off-the-shelf product. Both carry risk — buying locks you into a vendor's roadmap; building demands internal capacity. We share the framework our advisory team uses with clients across Africa and the UK.",        href: '/resources/build-vs-buy-framework',            accent: '#38bdf8', author: AUTHORS.olu },
-  { category: 'Managed Services',      readTime: '5 min read', date: 'March 2024',    title: 'The Business Case for Managed IT Services: When to Outsource vs Keep In-House',                       excerpt: 'For growing organisations, the question is not "managed or in-house" — it is "where does each model create the most value?" Cybersecurity operations, network management, and cloud infrastructure management are increasingly specialist domains where managed services deliver better outcomes at lower total cost of ownership.',          href: '/resources/managed-services-business-case',    accent: '#14b8a6', author: AUTHORS.adewale },
+  { category: 'Managed Services',      readTime: '5 min read', date: 'March 2024',    title: 'The Business Case for Managed IT Services: When to Outsource vs Keep In-House',                       excerpt: 'For growing organisations, the question is not "managed or in-house" — it is "where does each model create the most value?" Cybersecurity operations, network management, and cloud infrastructure management are increasingly specialist domains where managed services deliver better outcomes at lower total cost of ownership.',          href: '/resources/managed-services-business-case',    accent: '#018ad8', author: AUTHORS.adewale },
   { category: 'Cloud',                 readTime: '8 min read', date: 'October 2023',  title: 'Cloud Migration Best Practices: A Technical Guide for Enterprises Moving Workloads to AWS or Azure',   excerpt: 'Cloud migration is rarely a "lift and shift" exercise. Done well, it is an opportunity to re-architect for scale, resilience, and security. Done poorly, it creates cloud sprawl, unexpected costs, and new attack surfaces. We share the phased migration methodology our infrastructure team applies on every cloud project.',          href: '/resources/cloud-migration-best-practices',    accent: '#38bdf8', author: AUTHORS.olu },
-  { category: 'Cybersecurity',         readTime: '6 min read', date: 'June 2023',     title: 'Why Endpoint Security Has Become Your Most Critical Attack Surface',                                     excerpt: "The endpoint — the laptop, the phone, the remote worker's home router — is now the primary battleground in cybersecurity. As remote and hybrid work cements itself as the default, organisations that rely on perimeter-only security are exposing themselves to a new class of threats. EDR, XDR, and zero trust endpoint controls are no longer optional.", href: '/resources/endpoint-security-critical-surface', accent: '#14b8a6', author: AUTHORS.adewale },
+  { category: 'Cybersecurity',         readTime: '6 min read', date: 'June 2023',     title: 'Why Endpoint Security Has Become Your Most Critical Attack Surface',                                     excerpt: "The endpoint — the laptop, the phone, the remote worker's home router — is now the primary battleground in cybersecurity. As remote and hybrid work cements itself as the default, organisations that rely on perimeter-only security are exposing themselves to a new class of threats. EDR, XDR, and zero trust endpoint controls are no longer optional.", href: '/resources/endpoint-security-critical-surface', accent: '#018ad8', author: AUTHORS.adewale },
 ]
 
 const catColors: Record<string, string> = {
@@ -47,7 +47,7 @@ const catColors: Record<string, string> = {
 }
 
 function CategoryBadge({ cat }: { cat: string }) {
-  const cls = catColors[cat] ?? 'text-gray-500 border-slate-200 bg-gray-50'
+  const cls = catColors[cat] ?? 'text-gray-600 border-slate-200 bg-gray-50'
   return (
     <span className={`inline-flex items-center border rounded-full px-3 py-0.5 text-[10px] font-semibold tracking-widest uppercase ${cls}`}>
       {cat}
@@ -78,7 +78,7 @@ export default function ResourcesPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-[1.02] tracking-tight mb-6">
             Resources &amp; Insights
           </h1>
-          <p className="text-gray-500 text-lg max-w-2xl leading-relaxed">
+          <p className="text-gray-600 text-lg max-w-2xl leading-relaxed">
             Expert articles, practical guides, and strategic insights on cybersecurity,
             infrastructure, cloud, and digital transformation — written by the Limesoft team.
           </p>
@@ -94,13 +94,13 @@ export default function ResourcesPage() {
                 <div>
                   <div className="flex items-center gap-4 mb-8">
                     <CategoryBadge cat={featured.category} />
-                    <span className="text-gray-400 text-xs">{featured.readTime}</span>
-                    <span className="text-gray-400 text-xs">{featured.date}</span>
+                    <span className="text-gray-500 text-xs">{featured.readTime}</span>
+                    <span className="text-gray-500 text-xs">{featured.date}</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug mb-5 group-hover:text-cyan-neon transition-colors">
                     {featured.title}
                   </h2>
-                  <p className="text-gray-500 leading-relaxed">{featured.excerpt}</p>
+                  <p className="text-gray-600 leading-relaxed">{featured.excerpt}</p>
                 </div>
                 <div className="mt-10 flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -110,7 +110,7 @@ export default function ResourcesPage() {
                     </div>
                     <div>
                       <div className="text-gray-700 text-xs font-semibold">{featured.author.name}</div>
-                      <div className="text-gray-400 text-[10px]">{featured.author.role}</div>
+                      <div className="text-gray-500 text-[10px]">{featured.author.role}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 text-cyan-neon text-sm font-semibold group-hover:gap-4 transition-all">
@@ -141,7 +141,7 @@ export default function ResourcesPage() {
                 className={`whitespace-nowrap text-[11px] font-semibold tracking-[0.25em] uppercase py-4 border-b-2 transition-all ${
                   i === 0
                     ? 'text-cyan-neon border-cyan-neon'
-                    : 'text-gray-400 border-transparent hover:text-gray-600 hover:border-gray-300'
+                    : 'text-gray-500 border-transparent hover:text-gray-600 hover:border-gray-300'
                 }`}>
                 {cat}
               </button>
@@ -163,21 +163,21 @@ export default function ResourcesPage() {
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-4 mb-4">
                     <CategoryBadge cat={a.category} />
-                    <span className="text-gray-400 text-xs">{a.date}</span>
-                    <span className="text-gray-400 text-xs">{a.readTime}</span>
+                    <span className="text-gray-500 text-xs">{a.date}</span>
+                    <span className="text-gray-500 text-xs">{a.readTime}</span>
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-gray-800 leading-snug mb-3 group-hover:text-cyan-neon transition-colors">
                     {a.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-5">{a.excerpt}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-2 mb-5">{a.excerpt}</p>
                   <div className="flex items-center gap-2.5">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-black"
                       style={{ background: `${a.author.color}20`, border: `1px solid ${a.author.color}35`, color: a.author.color }}>
                       {a.author.initials}
                     </div>
-                    <span className="text-gray-500 text-xs">{a.author.name}</span>
+                    <span className="text-gray-600 text-xs">{a.author.name}</span>
                     <span className="text-gray-300 text-xs">·</span>
-                    <span className="text-gray-400 text-xs">{a.author.role}</span>
+                    <span className="text-gray-500 text-xs">{a.author.role}</span>
                   </div>
                 </div>
                 <div className="flex md:items-start md:pt-1.5 shrink-0">
@@ -204,14 +204,14 @@ export default function ResourcesPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 Expert Insights Across the Full Technology Stack
               </h2>
-              <p className="text-gray-500 leading-relaxed mb-10">
+              <p className="text-gray-600 leading-relaxed mb-10">
                 Our certified engineers and consultants write from real-world experience on deployments
                 across Africa, the UK, and beyond. Every article is grounded in projects we have actually delivered.
               </p>
               <div className="flex flex-wrap gap-2.5">
                 {topics.map((tag) => (
                   <span key={tag}
-                    className="px-3.5 py-1.5 border border-slate-200 text-gray-400 text-xs bg-white cursor-default hover:border-cyan-neon/40 hover:text-teal-600 transition-colors">
+                    className="px-3.5 py-1.5 border border-slate-200 text-gray-500 text-xs bg-white cursor-default hover:border-cyan-neon/40 hover:text-teal-600 transition-colors">
                     {tag}
                   </span>
                 ))}
@@ -220,7 +220,7 @@ export default function ResourcesPage() {
 
             <div>
               <h3 className="text-gray-900 font-bold text-xl mb-2">Stay Informed</h3>
-              <p className="text-gray-500 text-sm mb-8 leading-relaxed">
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed">
                 Get the latest cybersecurity and technology insights delivered to your inbox.
                 Expert content only — published when it matters, never spammed.
               </p>
@@ -237,7 +237,7 @@ export default function ResourcesPage() {
                   </button>
                 </div>
               </form>
-              <p className="text-gray-300 text-xs mt-6">Unsubscribe at any time. No spam — ever.</p>
+              <p className="text-gray-500 text-xs mt-6">Unsubscribe at any time. No spam — ever.</p>
             </div>
           </div>
         </div>
@@ -250,12 +250,12 @@ export default function ResourcesPage() {
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
               Ready to put these insights into action?
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 text-sm">
               Talk to our team about how these solutions apply to your organisation.
             </p>
           </div>
           <Link href="/contact"
-            className="shrink-0 bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all duration-200">
+            className="shrink-0 bg-cyan-neon text-[#0d1f3c] font-semibold px-8 py-3.5 rounded-xl text-sm tracking-wide hover:shadow-[0_0_30px_rgba(1,138,216,0.3)] transition-all duration-200">
             Start the Conversation
           </Link>
         </div>

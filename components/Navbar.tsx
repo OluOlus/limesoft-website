@@ -24,11 +24,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isLightPage =
+    pathname === '/about' || pathname.startsWith('/about/') ||
+    pathname === '/services' || pathname.startsWith('/services/') ||
+    pathname === '/resources' || pathname.startsWith('/resources/')
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-navy-950/96 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
+        scrolled || isLightPage
+          ? 'bg-navy-950/95 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
           : 'bg-transparent'
       }`}
     >
@@ -77,7 +82,7 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden bg-navy-900/98 backdrop-blur-xl border-b border-white/10">
+        <div className="md:hidden bg-navy-900/100 backdrop-blur-xl border-b border-white/10">
           <div className="px-6 py-8 flex flex-col gap-6">
             {navLinks.map(({ href, label }) => (
               <Link
