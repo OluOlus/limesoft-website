@@ -19,7 +19,7 @@ export default function ContactPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[#030314]" />
+        <div className="absolute inset-0 bg-[#09172e]" />
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-magenta-neon/5 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4" />
 
@@ -39,7 +39,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── MAIN CONTACT AREA ── */}
-      <section className="py-16 bg-[#030314]">
+      <section className="py-16 bg-[#09172e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-16">
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Service</label>
                     <select
                       name="service"
-                      className="w-full bg-[#030314] border-b border-white/15 pb-3 text-white/60 text-sm focus:outline-none focus:border-cyan-neon transition-colors appearance-none cursor-pointer"
+                      className="w-full bg-[#09172e] border-b border-white/15 pb-3 text-white/60 text-sm focus:outline-none focus:border-cyan-neon transition-colors appearance-none cursor-pointer"
                     >
                       <option value="">Select a service...</option>
                       <option value="cybersecurity">Cybersecurity</option>
@@ -199,7 +199,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── OFFICES DETAIL ── flat horizontal ── */}
-      <section className="py-20 bg-[#04041c] border-t border-white/5">
+      <section className="py-20 bg-[#060d1a] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-white/25 text-[10px] tracking-[0.4em] uppercase mb-12">Our Locations</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/8">
@@ -218,7 +218,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── SERVICES QUICK LINKS ── */}
-      <section className="py-20 bg-[#030314] border-t border-white/5">
+      <section className="py-20 bg-[#09172e] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="text-white/25 text-[10px] tracking-[0.4em] uppercase mb-8">What can we help you with?</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

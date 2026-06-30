@@ -1,309 +1,221 @@
 import ParallaxHero from '@/components/ParallaxHero'
 import LogoTicker from '@/components/LogoTicker'
-import ServicesList from '@/components/ServicesList'
-import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal'
 import Link from 'next/link'
 
-const stats = [
-  { value: '4',    label: 'Global Offices',     sub: 'Nigeria · UK · Cameroon · Rwanda' },
-  { value: '8+',   label: 'Tech Partners',       sub: 'Cisco, AWS, Microsoft & more' },
-  { value: '15+',  label: 'Certifications',      sub: 'CCNP, PCNSE, ISC2, ITIL & more' },
-  { value: '100%', label: 'Delivery Commitment', sub: 'Waterfall · Hybrid · Agile' },
+
+const services = [
+  {
+    title: 'Managed Security',
+    desc: 'Next-gen firewalls, Zero Trust, penetration testing, EDR/XDR, cloud security, and Microsoft 365 security — keeping your organisation protected.',
+    href: '/services#cybersecurity',
+  },
+  {
+    title: 'Infrastructure',
+    desc: 'AWS and Azure landing zones, networking, compute, storage, Microsoft 365, and AI-ready infrastructure built for modern workloads.',
+    href: '/services#infrastructure',
+  },
+  {
+    title: 'Managed Services',
+    desc: 'SLA-backed network and firewall management, monitoring, and ongoing technical support so you can focus on your business.',
+    href: '/services#services',
+  },
+  {
+    title: 'Cloud & Applications',
+    desc: 'Cloud migration, application development, DevOps, and governance across AWS, Azure, and Microsoft 365.',
+    href: '/services#applications',
+  },
+]
+
+const differentiators = [
+  { num: '01', title: 'Globally Certified',        desc: 'CCNP, PCNSE, ISC2, ITIL v4, PMP, PRINCE2 — credentials backed by real-world delivery.' },
+  { num: '02', title: 'Pan-African + UK Presence',  desc: 'Local teams in Lagos, South Yorkshire, Douala, and Kigali. International standards everywhere.' },
+  { num: '03', title: 'Vendor-Agnostic',             desc: 'Cisco, Palo Alto, Fortinet, AWS, Microsoft — we recommend what fits you, not what pays us.' },
+  { num: '04', title: 'End-to-End Delivery',         desc: 'Design, implementation, and ongoing management — one partner for your full technology lifecycle.' },
+  { num: '05', title: 'Client-First Approach',       desc: 'Your success is our metric. We stay with you through every phase and beyond go-live.' },
+  { num: '06', title: 'Flexible Methodology',        desc: 'Waterfall, Agile, or Hybrid — certified project managers select the right model for each engagement.' },
+]
+
+const process = [
+  { step: '01', title: 'Assess',    desc: 'We audit your current environment, identify gaps, and define requirements.' },
+  { step: '02', title: 'Design',    desc: 'Our architects design a tailored solution aligned to your goals and budget.' },
+  { step: '03', title: 'Implement', desc: 'Certified engineers deploy and configure — with minimal disruption to operations.' },
+  { step: '04', title: 'Support',   desc: 'Ongoing managed services, monitoring, and advisory to keep you secure and optimised.' },
 ]
 
 const projects = [
-  {
-    client: 'Novare Africa',
-    service: 'Cybersecurity',
-    headline: 'Next-Gen Firewall Refresh',
-    desc: 'Secure network perimeter using Sophos XGS Series NGFW — protecting enterprise assets across multiple sites.',
-    accent: '#00e5ff',
-  },
-  {
-    client: 'Elysium Diem',
-    service: 'Infrastructure',
-    headline: 'SD-WLAN for 30+ Offices',
-    desc: 'UniFi Software Defined WLAN deployed across 30+ offices and 400+ users with unified control and visibility.',
-    accent: '#a855f7',
-  },
-  {
-    client: 'Jott Limited',
-    service: 'Managed Services',
-    headline: 'Managed Networks & Firewall',
-    desc: 'Ongoing managed network and firewall services with technical advisory and SLA-backed support.',
-    accent: '#e879f9',
-  },
-  {
-    client: 'Rocksteady Studios',
-    service: 'Applications',
-    headline: 'Cloud & Application Services',
-    desc: 'End-to-end cloud and application design, implementation, and sustained support for digital delivery.',
-    accent: '#00e5ff',
-  },
+  { client: 'Novare Africa',      service: 'Cybersecurity',    headline: 'Next-Gen Firewall Refresh' },
+  { client: 'Elysium Diem',       service: 'Infrastructure',   headline: 'SD-WLAN for 30+ Offices' },
+  { client: 'Jott Limited',       service: 'Managed Services', headline: 'Managed Networks & Firewall' },
+  { client: 'Rocksteady Studios', service: 'Applications',     headline: 'Cloud & Application Services' },
 ]
 
-const executive = [
-  {
-    initials: 'KA',
-    name: 'Kelvin Adeyemi',
-    role: 'Chief Executive Officer',
-    bio: 'Technology strategist with 15+ years driving digital transformation across West Africa and the UK. Leads Limesoft System\'s vision to become the No.1 trusted tech integrator on the continent.',
-    ringColor: '#00e5ff',
-  },
-  {
-    initials: 'TA',
-    name: 'Tunde Afolabi',
-    role: 'Chief Technology Officer',
-    bio: 'CCNP-certified infrastructure architect and cybersecurity expert. Oversees technical delivery across all four Limesoft offices, ensuring global standards on every project.',
-    ringColor: '#a855f7',
-  },
-  {
-    initials: 'FN',
-    name: 'Fatima Ndoye',
-    role: 'Head of Cybersecurity',
-    bio: 'PCNSE, ISC2, and Sophos-certified security architect. Leads Limesoft\'s cybersecurity practice, designing and delivering Zero Trust and NGFW solutions for enterprise clients.',
-    ringColor: '#e879f9',
-  },
-  {
-    initials: 'EM',
-    name: 'Emmanuel Mwangi',
-    role: 'Director of Operations',
-    bio: 'PMP and PRINCE2 certified programme director. Ensures flawless delivery across Limesoft\'s projects in Nigeria, Rwanda, Cameroon, and the United Kingdom.',
-    ringColor: '#00e5ff',
-  },
-]
+function SectionLabel({ text, color = '#14b8a6' }: { text: string; color?: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-4">
+      <span className="w-8 h-px" style={{ background: color }} />
+      <span className="text-xs font-semibold tracking-[0.35em] uppercase" style={{ color }}>{text}</span>
+    </div>
+  )
+}
 
 export default function HomePage() {
   return (
     <>
-      {/* ── PARALLAX HERO ── */}
+      {/* 1. HERO */}
       <ParallaxHero />
 
-      {/* ── ANIMATED PARTNER LOGO TICKER ── */}
-      <LogoTicker />
-
-      {/* ── STATS ── */}
-      <section className="py-20 bg-[#02020e]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            {stats.map(({ value, label, sub }) => (
-              <StaggerItem key={label}>
-                <div>
-                  <div className="text-4xl md:text-5xl font-black text-white mb-1 tracking-tight">
-                    {value}
-                  </div>
-                  <div className="text-cyan-neon text-[11px] font-bold tracking-widest uppercase mb-1">
-                    {label}
-                  </div>
-                  <div className="text-white/25 text-xs">{sub}</div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
+      {/* 2. PARTNER LOGOS */}
+      <section className="py-10 border-y border-white/10 bg-white/5">
+        <p className="text-center text-white/60 text-[10px] font-semibold tracking-[0.35em] uppercase mb-6">Technology Partners</p>
+        <LogoTicker />
       </section>
 
-      {/* ── SERVICES — interactive rows ── */}
-      <section className="py-24 bg-[#030318]">
+      {/* 4. MISSION */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal className="mb-14 flex items-end justify-between gap-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-px bg-cyan-neon" />
-                <span className="text-cyan-neon text-xs font-semibold tracking-[0.35em] uppercase">What We Do</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                Solutions Built for<br />the Digital Age
+              <SectionLabel text="Who We Are" />
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+                End-to-End Technology Solutions, Delivered Across Africa and the UK
               </h2>
             </div>
-            <Link href="/services" className="hidden md:inline text-white/30 text-xs font-semibold tracking-widest uppercase hover:text-cyan-neon transition-colors shrink-0">
-              All Services →
-            </Link>
-          </ScrollReveal>
-          <ServicesList />
-        </div>
-      </section>
-
-      {/* ── WHY LIMESOFT ── */}
-      <section className="bg-[#02020e] overflow-hidden py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
-            <ScrollReveal className="lg:sticky lg:top-28">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-8 h-px" style={{ background: '#a855f7' }} />
-                <span className="text-xs font-semibold tracking-[0.35em] uppercase" style={{ color: '#a855f7' }}>Why Limesoft?</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-8">
-                Trusted Partner in Every Digital Journey
-              </h2>
-              <p className="text-white/45 leading-relaxed mb-8">
-                Forward-thinking. Globally certified. Customer obsessed.
-                We combine deep technical expertise with strategic thinking — and stay with you
-                through every phase of delivery.
+            <div>
+              <p className="text-white/55 text-lg leading-relaxed mb-6">
+                Founded in 2020, Limesoft System was built to meet a clear need: organisations across Africa were adopting technology faster than they could secure and manage it.
               </p>
-              <div className="space-y-3 mb-10">
-                {['4 Global Offices', '15+ Technical Certifications', 'Vendor-Agnostic Advice', 'End-to-End Delivery'].map((tag) => (
-                  <div key={tag} className="flex items-center gap-3 text-white/50 text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-neon" />
-                    {tag}
-                  </div>
-                ))}
-              </div>
-              <Link href="/about" className="inline-flex items-center gap-2 text-cyan-neon text-sm font-semibold hover:gap-4 transition-all">
+              <p className="text-white/55 text-lg leading-relaxed mb-8">
+                Today we operate across four countries with certified engineers who have delivered solutions for enterprises, studios, and growing businesses alike.
+              </p>
+              <Link href="/about" className="inline-flex items-center gap-2 text-cyan-neon font-semibold text-sm hover:gap-4 transition-all duration-200">
                 Learn About Us →
               </Link>
-            </ScrollReveal>
-
-            <StaggerContainer className="space-y-0">
-              {[
-                { t: 'Globally Certified Team',    d: 'CCNP, PCNSE, ISC2, ITIL v4, PMP, PRINCE2 — credentials that prove our expertise, not just our claims.' },
-                { t: 'Pan-African + UK Presence',  d: 'Offices in Lagos, South Yorkshire, Douala, and Kigali — local knowledge, international standards.' },
-                { t: 'Vendor-Agnostic Approach',   d: 'Cisco, Palo Alto, Fortinet, AWS, Microsoft — we recommend what is right for you, not what benefits us.' },
-                { t: 'Flexible Methodology',       d: 'Waterfall, Agile, or Hybrid — our certified PMs select the right delivery model for each project.' },
-                { t: 'Customer Obsession',         d: 'Our clients are the heart of everything we do. Their success is our primary metric, every single time.' },
-                { t: 'Full-Lifecycle Delivery',    d: 'From design and implementation to ongoing managed services — one partner for the complete technology journey.' },
-              ].map((r, i) => (
-                <StaggerItem key={r.t}>
-                  <div className="flex gap-6 py-7 border-b border-white/5 group cursor-default">
-                    <span className="text-white/12 text-xs font-mono w-5 mt-0.5 shrink-0">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <div>
-                      <h3 className="text-white font-bold mb-2 group-hover:text-cyan-neon transition-colors duration-200">
-                        {r.t}
-                      </h3>
-                      <p className="text-white/40 text-sm leading-relaxed">{r.d}</p>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── EXECUTIVE TEAM ── */}
-      <section className="py-28 bg-[#030318]">
+      {/* 5. SERVICES — white section */}
+      <section className="py-24 bg-[#fcfbfc]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal className="mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-px" style={{ background: '#e879f9' }} />
-              <span className="text-xs font-semibold tracking-[0.35em] uppercase" style={{ color: '#e879f9' }}>Leadership</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Executive Team</h2>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {executive.map((exec) => (
-              <StaggerItem key={exec.name}>
-                <div
-                  className="group h-full border border-white/8 hover:border-white/20 transition-all duration-500 p-7"
-                  style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 100%)' }}
-                >
-                  <div className="mb-6">
-                    <div
-                      className="w-14 h-14 rounded-full flex items-center justify-center border"
-                      style={{
-                        background: `${exec.ringColor}20`,
-                        borderColor: `${exec.ringColor}40`,
-                      }}
-                    >
-                      <span className="text-white font-black text-lg">{exec.initials}</span>
-                    </div>
-                  </div>
-                  <h3 className="text-white font-bold mb-0.5">{exec.name}</h3>
-                  <p
-                    className="text-[11px] font-bold tracking-widest uppercase mb-4"
-                    style={{ color: exec.ringColor }}
-                  >
-                    {exec.role}
-                  </p>
-                  <p className="text-white/40 text-xs leading-relaxed">{exec.bio}</p>
-                  <div
-                    className="mt-6 h-px w-0 group-hover:w-full transition-all duration-500"
-                    style={{ background: exec.ringColor, opacity: 0.4 }}
-                  />
-                </div>
-              </StaggerItem>
+          <div className="text-center mb-14">
+            <SectionLabel text="What We Do" color="#0d9488"/>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">Our Core Services</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s, i) => (
+              <Link key={s.title} href={s.href}
+                className="group p-8 rounded-2xl border border-gray-200 bg-white hover:border-cyan-neon/40 hover:shadow-lg transition-all duration-300">
+                <div className="w-10 h-0.5 mb-6 bg-cyan-neon group-hover:w-16 transition-all duration-300" />
+                <p className="text-gray-300 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">0{i + 1}</p>
+                <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-cyan-neon transition-colors">{s.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">{s.desc}</p>
+                <span className="text-cyan-neon text-xs font-semibold tracking-widest uppercase">Learn More →</span>
+              </Link>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
-      {/* ── REFERENCE PROJECTS ── */}
-      <section className="py-28 bg-[#02020e]">
+      {/* 6. WHY LIMESOFT */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal className="mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-px bg-cyan-neon" />
-              <span className="text-cyan-neon text-xs font-semibold tracking-[0.35em] uppercase">Our Work</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Reference Projects</h2>
-          </ScrollReveal>
-
-          <StaggerContainer className="grid md:grid-cols-2 gap-px bg-white/5">
-            {projects.map((p) => (
-              <StaggerItem key={p.client}>
-                <div className="bg-[#02020e] p-10 group hover:bg-[#050530] transition-colors duration-500 h-full">
-                  <p
-                    className="text-[11px] font-black tracking-[0.3em] uppercase mb-6"
-                    style={{ color: p.accent }}
-                  >
-                    {p.service}
-                  </p>
-                  <p className="text-white/25 text-sm mb-2">{p.client}</p>
-                  <h3 className="text-white font-bold text-xl mb-4 leading-snug">{p.headline}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{p.desc}</p>
-                  <div
-                    className="mt-8 h-px w-8 group-hover:w-16 transition-all duration-500"
-                    style={{ background: p.accent }}
-                  />
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="relative overflow-hidden py-32">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #02020e 0%, #06063a 50%, #0e0030 100%)' }} />
-        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(0,229,255,0.4), transparent)' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(168,85,247,0.3), transparent)' }} />
-        <div className="absolute -top-20 right-1/4 w-80 h-80 rounded-full" style={{ background: 'radial-gradient(circle, rgba(0,229,255,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
-        <div className="absolute -bottom-20 left-1/4 w-80 h-80 rounded-full" style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
-
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-8 h-px bg-cyan-neon" />
-              <span className="text-cyan-neon text-xs font-semibold tracking-[0.35em] uppercase">Start Today</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-8">
-              Ready to Secure Your
-              <span className="text-gradient-brand"> Digital Future?</span>
+          <div className="mb-14">
+            <SectionLabel text="Why Limesoft?" />
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight max-w-xl">
+              Built Different. Delivered Better.
             </h2>
-            <p className="text-white/45 text-lg mb-12 leading-relaxed max-w-xl">
-              Partner with Limesoft System — your trusted catalyst for intelligent, secure,
-              and scalable technology solutions across Africa and beyond.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="group relative overflow-hidden bg-cyan-neon text-[#02020e] font-black px-10 py-4 text-sm tracking-wide"
-                style={{ boxShadow: '0 0 0 rgba(0,229,255,0)' }}
-              >
-                <span className="relative z-10">Start the Conversation</span>
-                <span className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
-              </Link>
-              <Link
-                href="/resources"
-                className="border border-white/15 text-white/60 font-semibold px-10 py-4 text-sm tracking-wide hover:border-white/40 hover:text-white transition-all duration-300"
-              >
-                Read Our Articles
-              </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {differentiators.map((d) => (
+              <div key={d.num}
+                className="group p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="text-white/10 text-4xl font-black mb-4 leading-none">{d.num}</div>
+                <h3 className="text-white font-bold mb-2 group-hover:text-cyan-neon transition-colors">{d.title}</h3>
+                <p className="text-white/45 text-sm leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. OUR PROCESS — white section */}
+      <section className="py-24 bg-[#fcfbfc]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <SectionLabel text="Our Approach" color="#0d9488"/>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">How We Deliver</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((p, i) => (
+              <div key={p.step} className="relative">
+                {i < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-7 left-full w-full h-px bg-gray-200 z-0" />
+                )}
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/8 flex items-center justify-center mb-5">
+                    <span className="text-teal-600 font-black text-sm">{p.step}</span>
+                  </div>
+                  <h3 className="text-gray-900 font-bold text-lg mb-2">{p.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. REFERENCE PROJECTS */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-14 gap-6">
+            <div>
+              <SectionLabel text="Our Work" />
+              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Reference Projects</h2>
             </div>
-          </ScrollReveal>
+            <Link href="/services" className="hidden md:inline text-white/30 text-xs font-semibold tracking-widest uppercase hover:text-cyan-neon transition-colors shrink-0">
+              All Services →
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projects.map((p) => (
+              <div key={p.client}
+                className="group p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-cyan-neon/20 transition-all duration-300">
+                <p className="text-cyan-neon text-[11px] font-black tracking-[0.3em] uppercase mb-4">{p.service}</p>
+                <p className="text-white/25 text-xs mb-2">{p.client}</p>
+                <h3 className="text-white font-bold leading-snug">{p.headline}</h3>
+                <div className="mt-6 h-px w-8 bg-cyan-neon/40 group-hover:w-16 transition-all duration-500" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FINAL CTA */}
+      <section className="relative py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-neon/5 via-transparent to-sky-500/5 backdrop-blur-sm" />
+        <div className="absolute inset-0 border-y border-white/8" />
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(20,184,166,0.45), transparent)' }} />
+
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <SectionLabel text="Get Started" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
+            Move Forward with Confidence
+          </h2>
+          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+            Don&apos;t let security gaps or outdated infrastructure hold your business back. Let&apos;s build something secure, scalable, and future-ready.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/contact"
+              className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(20,184,166,0.35)] transition-shadow duration-300">
+              <span className="relative z-10">Talk to an Expert</span>
+              <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
+            </Link>
+            <Link href="/services"
+              className="rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white/70 font-semibold px-10 py-4 text-sm tracking-wide hover:border-white/40 hover:text-white hover:bg-white/10 transition-all duration-300">
+              View Services
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --navy-950: #020212;
-  --navy-900: #040415;
-  --cyan-neon: #00e5ff;
+  --navy-950: #07111e;
+  --navy-900: #091528;
+  --cyan-neon: #14b8a6;
   --purple-neon: #a855f7;
   --magenta-neon: #e879f9;
 }
@@ -20,7 +20,12 @@ html {
 }
 
 body {
-  background-color: #02020e;
+  background-color: #0b1628;
+  background-image:
+    radial-gradient(ellipse at 60% 0%,   rgba(255,255,255, 0.055) 0%, transparent 45%),
+    radial-gradient(ellipse at 15% 35%,  rgba(20, 184, 166, 0.05) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 65%,  rgba(56, 189, 248, 0.04) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(255,255,255, 0.02)  0%, transparent 40%);
   color: white;
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
@@ -31,19 +36,13 @@ body {
 /* ─── Gradient text helpers ─── */
 @layer utilities {
   .text-gradient-brand {
-    background: linear-gradient(135deg, #00e5ff 0%, #a855f7 60%, #e879f9 100%);
+    background: linear-gradient(135deg, #14b8a6 0%, #38bdf8 60%, #2dd4bf 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .text-gradient-cyan {
-    background: linear-gradient(135deg, #00e5ff, #22d3ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .text-gradient-purple {
-    background: linear-gradient(135deg, #a855f7, #e879f9);
+    background: linear-gradient(135deg, #14b8a6, #2dd4bf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -51,25 +50,25 @@ body {
 
   /* ─── Dot grid ─── */
   .bg-dot-grid {
-    background-image: radial-gradient(rgba(0, 229, 255, 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(20, 184, 166, 0.12) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
   /* ─── Thin line grid ─── */
   .bg-grid {
     background-image:
-      linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(20, 184, 166, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 184, 166, 0.04) 1px, transparent 1px);
     background-size: 80px 80px;
   }
 
   /* ─── Glow border ─── */
   .glow-border-cyan {
-    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.25), inset 0 0 0 1px rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 0 1px rgba(20, 184, 166, 0.25), inset 0 0 0 1px rgba(20, 184, 166, 0.1);
   }
   .glow-border-cyan:hover {
-    box-shadow: 0 0 0 1px rgba(0, 229, 255, 0.6), inset 0 0 0 1px rgba(0, 229, 255, 0.2),
-      0 0 30px rgba(0, 229, 255, 0.15);
+    box-shadow: 0 0 0 1px rgba(20, 184, 166, 0.6), inset 0 0 0 1px rgba(20, 184, 166, 0.2),
+      0 0 30px rgba(20, 184, 166, 0.15);
   }
 
   /* Frosted glass */
@@ -146,12 +145,12 @@ body {
 }
 
 @keyframes borderPulse {
-  0%, 100% { border-color: rgba(0, 229, 255, 0.2); }
-  50%       { border-color: rgba(0, 229, 255, 0.6); }
+  0%, 100% { border-color: rgba(20, 184, 166, 0.2); }
+  50%       { border-color: rgba(20, 184, 166, 0.6); }
 }
 
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #02020e; }
-::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.25); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(0, 229, 255, 0.5); }
+::-webkit-scrollbar-thumb { background: rgba(20, 184, 166, 0.25); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(20, 184, 166, 0.5); }

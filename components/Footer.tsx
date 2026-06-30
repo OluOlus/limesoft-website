@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { LimesoftLogoMark, LimesoftWordmark } from './Logo'
+import Logo from './Logo'
 
 const offices = [
   { flag: '🇳🇬', country: 'Nigeria', address: 'Plot 1, Remi Olowude St, Lekki Phase 1, Lagos' },
@@ -10,7 +10,7 @@ const offices = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020210] border-t border-white/5">
+    <footer className="bg-[#060d1a] border-t border-white/8">
       <div className="h-px bg-gradient-to-r from-transparent via-cyan-neon/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-8">
@@ -19,11 +19,10 @@ export default function Footer() {
           {/* Brand + offices */}
           <div className="lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-3 mb-6">
-              <LimesoftLogoMark className="w-9 h-10" />
-              <LimesoftWordmark size="md" />
+              <Logo height={44} />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">
-              Next-gen cybersecurity and tech-system integrator. Beyond Integration, Towards Transformation.
+              Cybersecurity · Infrastructure · Managed Services · Cloud Solutions — delivered across Africa and the UK.
             </p>
 
             <div className="space-y-4">
@@ -90,7 +89,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/20 text-xs">© 2025 Limesoft System. All rights reserved.</p>
-          <p className="text-white/15 text-xs">Beyond Integration, Towards Transformation</p>
+          <p className="text-white/15 text-xs">Securing Africa&apos;s Digital Future</p>
         </div>
       </div>
     </footer>

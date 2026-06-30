@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LimesoftLogoMark, LimesoftWordmark } from './Logo'
+import Logo from './Logo'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -34,8 +34,7 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group" aria-label="Limesoft System home">
-          <LimesoftLogoMark className="w-8 h-9 transition-transform group-hover:scale-105" />
-          <LimesoftWordmark size="md" />
+          <Logo height={40} className="transition-transform group-hover:scale-105" />
         </Link>
 
         <div className="hidden md:flex items-center gap-7">
@@ -60,7 +59,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="text-sm font-semibold text-navy-950 bg-cyan-neon px-5 py-2 rounded-sm tracking-wide hover:bg-white transition-colors duration-200"
+            className="text-sm font-semibold text-[#0d1f3c] bg-cyan-neon px-5 py-2 rounded-xl tracking-wide hover:opacity-90 transition-opacity duration-200"
           >
             Get in Touch
           </Link>
@@ -92,7 +91,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 bg-cyan-neon text-navy-950 font-semibold text-center py-3 rounded-sm"
+              className="mt-2 bg-cyan-neon text-navy-950 font-semibold text-center py-3 rounded-xl"
               onClick={() => setMobileOpen(false)}
             >
               Get in Touch

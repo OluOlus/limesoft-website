@@ -4,12 +4,13 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Limesoft System | Next-Gen Cybersecurity & Tech Integration',
+  title: 'Limesoft System | Technology Solutions for Africa & the UK',
   description:
-    'Limesoft System is a next-gen cybersecurity and tech-system integrator focused on driving innovation and securing the digital future. Offices in Nigeria, UK, Cameroon and Rwanda.',
+    'Limesoft System delivers cybersecurity, network infrastructure, managed IT services, and cloud solutions across Africa and the UK. Offices in Nigeria, UK, Cameroon and Rwanda.',
   keywords: [
     'cybersecurity',
-    'tech integration',
+    'IT solutions',
+    'managed services',
     'digital transformation',
     'IT infrastructure',
     'cloud computing',
@@ -25,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-navy-950 text-white antialiased">
+      <body className="bg-[#0b1628] text-white antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

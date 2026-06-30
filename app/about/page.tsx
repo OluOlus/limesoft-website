@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About Us | Limesoft System',
   description:
-    'Learn about Limesoft System — next-gen cybersecurity and tech-system integrator with offices in Nigeria, UK, Cameroon, and Rwanda.',
+    'Learn about Limesoft System — cybersecurity and IT solutions firm with offices in Nigeria, UK, Cameroon, and Rwanda.',
 }
 
 const certifications = [
@@ -27,7 +27,7 @@ export default function AboutPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[#030314]" />
+        <div className="absolute inset-0 bg-[#09172e]" />
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-neon/5 rounded-full blur-[150px] -translate-y-1/3 translate-x-1/4" />
 
@@ -40,14 +40,14 @@ export default function AboutPage() {
             Securing and Transforming the Digital Future
           </h1>
           <p className="text-white/50 text-lg max-w-2xl leading-relaxed">
-            Limesoft System is a next-gen cybersecurity and tech-system integrator — delivering tailored solutions that
-            optimise operations and safeguard critical assets, from Lagos to London.
+            Limesoft System delivers cybersecurity, infrastructure, and managed IT services that
+            protect critical assets and accelerate digital growth — from Lagos to London.
           </p>
         </div>
       </section>
 
       {/* ── MISSION / VISION ── full-bleed split ── */}
-      <section className="bg-[#030314]">
+      <section className="bg-[#09172e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/8">
             <div className="py-16 md:pr-16">
@@ -73,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── ABOUT TEXT — editorial ── */}
-      <section className="py-24 bg-[#04041c]">
+      <section className="py-24 bg-[#060d1a]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-16">
             <div className="lg:col-span-4">
@@ -107,7 +107,7 @@ export default function AboutPage() {
               </p>
               <blockquote className="border-l-2 border-cyan-neon pl-6 mt-10">
                 <p className="text-white text-xl font-medium italic leading-snug">
-                  "Beyond Integration, Towards Transformation."
+                  "Securing Africa&apos;s Digital Future."
                 </p>
               </blockquote>
             </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CORE VALUES ── horizontal scroll / editorial ── */}
-      <section className="py-24 bg-[#030314]">
+      <section className="py-24 bg-[#09172e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
@@ -159,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CERTIFICATIONS ── flat tag style ── */}
-      <section className="py-24 bg-[#030314]">
+      <section className="py-24 bg-[#09172e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="inline-flex items-center gap-2.5 mb-12">
             <span className="w-8 h-px bg-cyan-neon" />
@@ -192,7 +192,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── METHODOLOGY ── */}
-      <section className="py-24 bg-[#04041c]">
+      <section className="py-24 bg-[#060d1a]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── OFFICES ── */}
-      <section className="py-24 bg-[#030314]">
+      <section className="py-24 bg-[#09172e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <span className="inline-flex items-center gap-2.5 mb-12">
             <span className="w-8 h-px bg-purple-neon" />
@@ -252,7 +252,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 bg-[#04041c] border-t border-white/5">
+      <section className="py-20 bg-[#060d1a] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">

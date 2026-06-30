@@ -127,7 +127,7 @@ export default function ServicesPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[#030314]" />
+        <div className="absolute inset-0 bg-[#09172e]" />
         <div className="absolute inset-0 bg-grid opacity-40" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-purple-neon/5 rounded-full blur-[140px] translate-y-1/3 -translate-x-1/4" />
 
@@ -164,7 +164,7 @@ export default function ServicesPage() {
         <section
           key={s.id}
           id={s.id}
-          className={`py-28 ${i % 2 === 0 ? 'bg-[#030314]' : 'bg-[#04041c]'}`}
+          className={`py-28 ${i % 2 === 0 ? 'bg-[#09172e]' : 'bg-[#060d1a]'}`}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Header row */}
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                 <p className="text-white/25 text-[10px] tracking-[0.3em] uppercase mb-8">Capabilities</p>
                 <div className="grid sm:grid-cols-2 gap-px bg-white/5">
                   {s.capabilities.map((cap) => (
-                    <div key={cap.name} className={`p-6 ${i % 2 === 0 ? 'bg-[#030314]' : 'bg-[#04041c]'} hover:bg-white/3 transition-colors group`}>
+                    <div key={cap.name} className={`p-6 ${i % 2 === 0 ? 'bg-[#09172e]' : 'bg-[#060d1a]'} hover:bg-white/3 transition-colors group`}>
                       <div className="flex items-center gap-2 mb-3">
                         <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.accent }} />
                         <h4 className="text-white text-sm font-semibold group-hover:text-white transition-colors">
@@ -241,7 +241,7 @@ export default function ServicesPage() {
       ))}
 
       {/* ── CTA ── */}
-      <section className="py-24 bg-[#030314] border-t border-white/5">
+      <section className="py-24 bg-[#09172e] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <h2 className="text-3xl font-bold text-white mb-2">
