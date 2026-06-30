@@ -5,24 +5,32 @@ import Link from 'next/link'
 
 const services = [
   {
+    num: '01',
     title: 'Managed Security',
     desc: 'Next-gen firewalls, Zero Trust, penetration testing, EDR/XDR, cloud security, and Microsoft 365 security — keeping your organisation protected.',
-    href: '/services#cybersecurity',
+    href: '/services/managed-security',
+    accent: '#018ad8',
   },
   {
+    num: '02',
     title: 'Infrastructure',
     desc: 'AWS and Azure landing zones, networking, compute, storage, Microsoft 365, and AI-ready infrastructure built for modern workloads.',
-    href: '/services#infrastructure',
+    href: '/services/infrastructure',
+    accent: '#38bdf8',
   },
   {
+    num: '03',
+    title: 'Applications',
+    desc: 'Custom web and mobile applications, enterprise integrations, cloud-native development, and legacy modernisation — built for your workflows.',
+    href: '/services/applications',
+    accent: '#018ad8',
+  },
+  {
+    num: '04',
     title: 'Managed Services',
-    desc: 'SLA-backed network and firewall management, monitoring, and ongoing technical support so you can focus on your business.',
-    href: '/services#services',
-  },
-  {
-    title: 'Cloud & Applications',
-    desc: 'Cloud migration, application development, DevOps, and governance across AWS, Azure, and Microsoft 365.',
-    href: '/services#applications',
+    desc: 'SLA-backed network and firewall management, monitoring, IT consulting, and ongoing technical support so you can focus on your business.',
+    href: '/services/managed-services',
+    accent: '#38bdf8',
   },
 ]
 
@@ -40,6 +48,27 @@ const process = [
   { step: '02', title: 'Design',    desc: 'Our architects design a tailored solution aligned to your goals and budget.' },
   { step: '03', title: 'Implement', desc: 'Certified engineers deploy and configure — with minimal disruption to operations.' },
   { step: '04', title: 'Support',   desc: 'Ongoing managed services, monitoring, and advisory to keep you secure and optimised.' },
+]
+
+const insights = [
+  {
+    cat: 'Cybersecurity',
+    date: 'March 2026',
+    title: 'Zero Trust Architecture: Why Perimeter Security Is No Longer Enough',
+    href: '/resources/zero-trust-architecture',
+  },
+  {
+    cat: 'Infrastructure',
+    date: 'November 2025',
+    title: 'AI-Ready Infrastructure: Preparing Your Data Centre for the Intelligence Era',
+    href: '/resources/ai-ready-infrastructure',
+  },
+  {
+    cat: 'Cloud',
+    date: 'May 2025',
+    title: 'AWS vs Azure: Choosing the Right Cloud Platform for Your Business',
+    href: '/resources/aws-vs-azure-guide',
+  },
 ]
 
 function SectionLabel({ text, color = '#018ad8' }: { text: string; color?: string }) {
@@ -65,7 +94,7 @@ export default function HomePage() {
         <LogoTicker />
       </section>
 
-      {/* 4. MISSION */}
+      {/* 3. MISSION */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -98,16 +127,16 @@ export default function HomePage() {
       <section className="py-24 bg-[#fcfbfc]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
-            <SectionLabel text="What We Do" color="#0d9488"/>
+            <SectionLabel text="What We Do" />
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">Our Core Services</h2>
           </ScrollReveal>
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s, i) => (
+            {services.map((s) => (
               <StaggerItem key={s.title}>
                 <Link href={s.href}
                   className="group flex flex-col h-full p-8 rounded-2xl border border-gray-200 bg-white hover:border-cyan-neon/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="w-10 h-0.5 mb-6 bg-cyan-neon group-hover:w-16 transition-all duration-300" />
-                  <p className="text-gray-300 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">0{i + 1}</p>
+                  <p className="text-gray-300 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">{s.num}</p>
                   <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-cyan-neon transition-colors">{s.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{s.desc}</p>
                   <span className="text-cyan-neon text-xs font-semibold tracking-widest uppercase">Learn More →</span>
@@ -145,7 +174,7 @@ export default function HomePage() {
       <section className="py-24 bg-[#fcfbfc]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal className="text-center mb-16">
-            <SectionLabel text="Our Approach" color="#0d9488"/>
+            <SectionLabel text="Our Approach" />
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">How We Deliver</h2>
           </ScrollReveal>
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -157,7 +186,7 @@ export default function HomePage() {
                   )}
                   <div className="relative z-10">
                     <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/10 flex items-center justify-center mb-5">
-                      <span className="text-teal-600 font-black text-sm">{p.step}</span>
+                      <span className="text-cyan-neon font-black text-sm">{p.step}</span>
                     </div>
                     <h3 className="text-gray-900 font-bold text-lg mb-2">{p.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
@@ -169,11 +198,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 8. RECENT INSIGHTS */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollReveal className="flex items-end justify-between mb-12">
+            <div>
+              <SectionLabel text="Insights" />
+              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">From Our Team</h2>
+            </div>
+            <Link href="/resources" className="hidden sm:inline-flex items-center gap-2 text-cyan-neon text-sm font-semibold hover:gap-4 transition-all duration-200 shrink-0">
+              All articles →
+            </Link>
+          </ScrollReveal>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-6">
+            {insights.map((a) => (
+              <StaggerItem key={a.href}>
+                <Link href={a.href}
+                  className="group flex flex-col h-full border border-white/8 rounded-2xl overflow-hidden bg-white/3 hover:border-white/20 hover:bg-white/6 transition-all duration-300">
+                  <div className="h-[3px] w-full" style={{ background: 'linear-gradient(90deg, #018ad8, transparent)' }} />
+                  <div className="p-7 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-5">
+                      <span className="text-[10px] font-bold tracking-widest uppercase text-cyan-neon">{a.cat}</span>
+                      <span className="text-white/20 text-[11px]">/</span>
+                      <span className="text-white/30 text-[11px]">{a.date}</span>
+                    </div>
+                    <h3 className="text-white/85 text-base font-bold leading-snug flex-1 group-hover:text-white transition-colors">
+                      {a.title}
+                    </h3>
+                    <div className="mt-6 flex items-center gap-1.5 text-cyan-neon text-xs font-semibold group-hover:gap-3 transition-all duration-200">
+                      Read article
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <div className="mt-8 sm:hidden text-center">
+            <Link href="/resources" className="text-cyan-neon text-sm font-semibold">
+              All articles →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 9. FINAL CTA */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-neon/5 via-transparent to-sky-500/5 backdrop-blur-sm" />
         <div className="absolute inset-0 border-y border-white/10" />
-        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(1, 138, 216,0.45), transparent)' }} />
+        <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(1,138,216,0.45), transparent)' }} />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
@@ -186,9 +263,9 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/contact"
-                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(1,138,216,0.35)] transition-shadow duration-300">
+                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-white font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(1,138,216,0.35)] transition-shadow duration-300">
                 <span className="relative z-10">Talk to an Expert</span>
-                <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
+                <span className="absolute inset-0 bg-[#0179c0] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
               </Link>
               <Link href="/services"
                 className="rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white/70 font-semibold px-10 py-4 text-sm tracking-wide hover:border-white/40 hover:text-white hover:bg-white/10 transition-all duration-300">

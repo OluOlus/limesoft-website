@@ -131,3 +131,42 @@ export function JuniperLogo({ className = 'h-7' }: { className?: string }) {
     </svg>
   )
 }
+
+export function SophosLogo({ className = 'h-8' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="4" width="28" height="28" rx="6" fill="#0073E6" />
+      <text x="16" y="24" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="900" fill="white">
+        S
+      </text>
+      <text x="38" y="23" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="700" fill="white" opacity="0.88">
+        Sophos
+      </text>
+    </svg>
+  )
+}
+
+export function AzureLogo({ className = 'h-8' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Azure triangle logo */}
+      <path d="M14 4 L26 4 L20 16 Z" fill="#0089D6" />
+      <path d="M8 28 L22 28 L14 4 Z" fill="#0089D6" opacity="0.7" />
+      <path d="M20 16 L28 28 L8 28 Z" fill="#50E6FF" opacity="0.85" />
+      <text x="36" y="23" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="600" fill="white" opacity="0.88">
+        Azure
+      </text>
+    </svg>
+  )
+}
+
+export function ISC2Logo({ className = 'h-8' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 80 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="4" width="76" height="28" rx="5" fill="#007A33" />
+      <text x="40" y="24" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="13" fontWeight="800" fill="white" letterSpacing="1">
+        ISC²
+      </text>
+    </svg>
+  )
+}

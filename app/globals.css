@@ -149,6 +149,43 @@ body {
   50%       { border-color: rgba(1, 138, 216, 0.6); }
 }
 
+/* ─── 3D card tilt ─── */
+.card-3d {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.card-3d:hover {
+  transform: perspective(800px) rotateX(-3deg) translateY(-6px);
+  box-shadow: 0 28px 56px rgba(0,0,0,0.45), 0 0 0 1px rgba(56,189,248,0.15);
+}
+
+/* ─── Floating orb ─── */
+.float-orb {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+.float-orb-delayed {
+  animation: floatSlow 7s ease-in-out infinite;
+  animation-delay: -3.5s;
+}
+
+/* ─── Spin ring ─── */
+.spin-ring {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* ─── Pulse ring ─── */
+.pulse-ring {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ─── Vendor ticker (slower) ─── */
+.vendor-ticker-track {
+  animation: ticker 35s linear infinite;
+  will-change: transform;
+}
+.vendor-ticker-track:hover {
+  animation-play-state: paused;
+}
+
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #02020e; }

@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 }
 
 const offices = [
-  { flag: '🇳🇬', country: 'Nigeria', city: 'Lagos', address: 'Plot 1, Remi Olowude St, Lekki Phase 1, Lagos 105102', accent: '#00e5ff' },
-  { flag: '🇬🇧', country: 'United Kingdom', city: 'South Yorkshire', address: '46 Leatham Avenue, South Yorkshire S61 1AD', accent: '#a855f7' },
-  { flag: '🇨🇲', country: 'Cameroon', city: 'Douala', address: 'Boulevard de la Liberté, Akwa, Douala', accent: '#e879f9' },
-  { flag: '🇷🇼', country: 'Rwanda', city: 'Kigali', address: 'KG 7 Ave, Kigali Heights, Kigali', accent: '#00e5ff' },
+  { flag: '🇳🇬', country: 'Nigeria', city: 'Lagos', address: 'Plot 1, Remi Olowude St, Lekki Phase 1, Lagos 105102', accent: '#018ad8' },
+  { flag: '🇬🇧', country: 'United Kingdom', city: 'South Yorkshire', address: '46 Leatham Avenue, South Yorkshire S61 1AD', accent: '#38bdf8' },
+  { flag: '🇨🇲', country: 'Cameroon', city: 'Douala', address: 'Boulevard de la Liberté, Akwa, Douala', accent: '#018ad8' },
+  { flag: '🇷🇼', country: 'Rwanda', city: 'Kigali', address: 'KG 7 Ave, Kigali Heights, Kigali', accent: '#38bdf8' },
 ]
 
 export default function ContactPage() {
@@ -142,10 +142,10 @@ export default function ContactPage() {
           <p className="text-white/25 text-[10px] tracking-[0.4em] uppercase mb-8">What can we help you with?</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: 'Cybersecurity', href: '/services#cybersecurity', accent: '#00e5ff' },
-              { label: 'Infrastructure', href: '/services#infrastructure', accent: '#a855f7' },
-              { label: 'Applications', href: '/services#applications', accent: '#e879f9' },
-              { label: 'Managed Services', href: '/services#services', accent: '#00e5ff' },
+              { label: 'Managed Security', href: '/services/managed-security', accent: '#018ad8' },
+              { label: 'Infrastructure',   href: '/services/infrastructure',   accent: '#38bdf8' },
+              { label: 'Applications',     href: '/services/applications',     accent: '#018ad8' },
+              { label: 'Managed Services', href: '/services/managed-services', accent: '#38bdf8' },
             ].map((s) => (
               <Link
                 key={s.label}

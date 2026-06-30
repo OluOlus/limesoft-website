@@ -61,10 +61,10 @@ export default function Footer() {
             <h3 className="text-white/30 text-[10px] font-semibold tracking-[0.3em] uppercase mb-6">Services</h3>
             <ul className="space-y-4">
               {[
-                { label: 'Cybersecurity', href: '/services#cybersecurity' },
-                { label: 'Infrastructure', href: '/services#infrastructure' },
-                { label: 'Applications', href: '/services#applications' },
-                { label: 'Managed Services', href: '/services#services' },
+                { label: 'Managed Security', href: '/services/managed-security' },
+                { label: 'Infrastructure',   href: '/services/infrastructure' },
+                { label: 'Applications',     href: '/services/applications' },
+                { label: 'Managed Services', href: '/services/managed-services' },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <Link href={href} className="text-white/50 text-sm hover:text-cyan-neon transition-colors duration-200">
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/20 text-xs">© 2025 Limesoft System. All rights reserved.</p>
+          <p className="text-white/20 text-xs">© 2026 Limesoft System. All rights reserved.</p>
           <p className="text-white/15 text-xs">Securing Africa&apos;s Digital Future</p>
         </div>
       </div>
