@@ -124,7 +124,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <>
+    <div className="text-gray-800">
       {/* HERO */}
       <section className="relative pt-32 pb-24 overflow-hidden bg-[#eef2f7]">
         <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-sky-100/50 rounded-full blur-[140px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
@@ -252,6 +252,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }

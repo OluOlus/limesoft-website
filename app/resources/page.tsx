@@ -66,7 +66,7 @@ const topics = [
 
 export default function ResourcesPage() {
   return (
-    <>
+    <div className="text-gray-800">
       {/* HERO */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-[#eef2f7]">
         <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-sky-100/60 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
@@ -260,6 +260,6 @@ export default function ResourcesPage() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }

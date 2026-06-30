@@ -23,7 +23,7 @@ const offices = [
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="text-gray-800">
       {/* HERO */}
       <section className="relative pt-32 pb-24 overflow-hidden bg-[#eef2f7]">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-200/30 rounded-full blur-[150px] -translate-y-1/3 translate-x-1/4 pointer-events-none" />
@@ -257,6 +257,6 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
