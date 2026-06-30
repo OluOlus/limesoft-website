@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ContactForm from './ContactForm'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -46,89 +47,7 @@ export default function ContactPage() {
             {/* Form — 7 cols */}
             <div className="lg:col-span-7">
               <p className="text-white/30 text-[10px] tracking-[0.3em] uppercase mb-8">Send a Message</p>
-
-              <form action="mailto:info@limesoftsystem.com" method="POST" encType="text/plain" className="space-y-8">
-                <div className="grid sm:grid-cols-2 gap-8">
-                  <div>
-                    <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">First Name</label>
-                    <input
-                      type="text"
-                      name="firstName"
-                      required
-                      placeholder="John"
-                      className="w-full bg-transparent border-b border-white/15 pb-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-cyan-neon transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Last Name</label>
-                    <input
-                      type="text"
-                      name="lastName"
-                      required
-                      placeholder="Doe"
-                      className="w-full bg-transparent border-b border-white/15 pb-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-cyan-neon transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Email Address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="john@company.com"
-                    className="w-full bg-transparent border-b border-white/15 pb-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-cyan-neon transition-colors"
-                  />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-8">
-                  <div>
-                    <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Organisation</label>
-                    <input
-                      type="text"
-                      name="company"
-                      placeholder="Your Company"
-                      className="w-full bg-transparent border-b border-white/15 pb-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-cyan-neon transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Service</label>
-                    <select
-                      name="service"
-                      className="w-full bg-[#09172e] border-b border-white/15 pb-3 text-white/60 text-sm focus:outline-none focus:border-cyan-neon transition-colors appearance-none cursor-pointer"
-                    >
-                      <option value="">Select a service...</option>
-                      <option value="cybersecurity">Cybersecurity</option>
-                      <option value="infrastructure">Infrastructure</option>
-                      <option value="applications">Applications</option>
-                      <option value="managed-services">Managed Services</option>
-                      <option value="other">General Enquiry</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-white/40 text-xs uppercase tracking-widest mb-3">Message</label>
-                  <textarea
-                    name="message"
-                    rows={6}
-                    required
-                    placeholder="Tell us about your project or challenge..."
-                    className="w-full bg-transparent border-b border-white/15 pb-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-cyan-neon transition-colors resize-none"
-                  />
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center gap-4 text-cyan-neon font-semibold text-sm tracking-wide hover:gap-6 transition-all duration-300"
-                  >
-                    Send Message
-                    <span className="w-10 h-px bg-cyan-neon group-hover:w-16 transition-all duration-300" />
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Info — 5 cols */}
