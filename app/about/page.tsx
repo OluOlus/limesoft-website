@@ -33,12 +33,7 @@ const certifications = [
   { group: 'Services',       accent: '#64748b', items: ['CCNA', 'Sophos Certified Technician', 'PMP', 'ITIL v4', 'PRINCE2'] },
 ]
 
-const offices = [
-  { flag: '🇳🇬', country: 'Nigeria',        city: 'Lagos',          address: 'Plot 1, Remi Olowude St, Lekki Phase 1, Lagos 105102' },
-  { flag: '🇬🇧', country: 'United Kingdom', city: 'South Yorkshire', address: '46 Leatham Avenue, South Yorkshire S61 1AD' },
-  { flag: '🇨🇲', country: 'Cameroon',       city: 'Douala',         address: 'Boulevard de la Liberté, Akwa, Douala' },
-  { flag: '🇷🇼', country: 'Rwanda',         city: 'Kigali',         address: 'KG 7 Ave, Kigali Heights, Kigali' },
-]
+
 
 export default function AboutPage() {
   return (
@@ -219,27 +214,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* OFFICES */}
-      <section className="py-24 bg-[#eef2f7]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <span className="inline-flex items-center gap-2.5 mb-12">
-            <span className="w-8 h-px bg-cyan-neon" />
-            <span className="text-cyan-neon text-xs font-semibold tracking-[0.3em] uppercase">Global Presence</span>
-          </span>
-          <h2 className="text-4xl font-bold text-gray-800 mb-16">Our Digital Footprint</h2>
-          <Carousel theme="light">
-            {offices.map(({ flag, country, city, address }) => (
-              <div key={country} className="h-full p-8 rounded-2xl border border-slate-200/60 bg-white hover:border-cyan-neon/40 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl mb-5">{flag}</div>
-                <p className="text-gray-800 font-bold mb-1">{country}</p>
-                <p className="text-cyan-neon text-xs font-semibold mb-3">{city}</p>
-                <p className="text-gray-600 text-xs leading-relaxed">{address}</p>
-              </div>
-            ))}
-          </Carousel>
         </div>
       </section>
 
