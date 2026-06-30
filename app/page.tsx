@@ -1,7 +1,7 @@
 import ParallaxHero from '@/components/ParallaxHero'
 import LogoTicker from '@/components/LogoTicker'
+import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal'
 import Link from 'next/link'
-
 
 const services = [
   {
@@ -66,7 +66,9 @@ export default function HomePage() {
 
       {/* 2. PARTNER LOGOS */}
       <section className="py-10 border-y border-white/10 bg-white/5">
-        <p className="text-center text-white/60 text-[10px] font-semibold tracking-[0.35em] uppercase mb-6">Technology Partners</p>
+        <ScrollReveal>
+          <p className="text-center text-white/60 text-[10px] font-semibold tracking-[0.35em] uppercase mb-6">Technology Partners</p>
+        </ScrollReveal>
         <LogoTicker />
       </section>
 
@@ -74,101 +76,110 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <SectionLabel text="Who We Are" />
-              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
-                End-to-End Technology Solutions, Delivered Across Africa and the UK
-              </h2>
-            </div>
-            <div>
-              <p className="text-white/55 text-lg leading-relaxed mb-6">
-                Founded in 2020, Limesoft System was built to meet a clear need: organisations across Africa were adopting technology faster than they could secure and manage it.
-              </p>
-              <p className="text-white/55 text-lg leading-relaxed mb-8">
-                Today we operate across four countries with certified engineers who have delivered solutions for enterprises, studios, and growing businesses alike.
-              </p>
-              <Link href="/about" className="inline-flex items-center gap-2 text-cyan-neon font-semibold text-sm hover:gap-4 transition-all duration-200">
-                Learn About Us →
-              </Link>
-            </div>
+            <ScrollReveal direction="left">
+              <div>
+                <SectionLabel text="Who We Are" />
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+                  End-to-End Technology Solutions, Delivered Across Africa and the UK
+                </h2>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <div>
+                <p className="text-white/55 text-lg leading-relaxed mb-6">
+                  Founded in 2020, Limesoft System was built to meet a clear need: organisations across Africa were adopting technology faster than they could secure and manage it.
+                </p>
+                <p className="text-white/55 text-lg leading-relaxed mb-8">
+                  Today we operate across four countries with certified engineers who have delivered solutions for enterprises, studios, and growing businesses alike.
+                </p>
+                <Link href="/about" className="inline-flex items-center gap-2 text-cyan-neon font-semibold text-sm hover:gap-4 transition-all duration-200">
+                  Learn About Us →
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* 5. SERVICES — white section */}
+      {/* 5. SERVICES — light section */}
       <section className="py-24 bg-[#fcfbfc]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <ScrollReveal className="text-center mb-14">
             <SectionLabel text="What We Do" color="#0d9488"/>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">Our Core Services</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          </ScrollReveal>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
-              <Link key={s.title} href={s.href}
-                className="group p-8 rounded-2xl border border-gray-200 bg-white hover:border-cyan-neon/40 hover:shadow-lg transition-all duration-300">
-                <div className="w-10 h-0.5 mb-6 bg-cyan-neon group-hover:w-16 transition-all duration-300" />
-                <p className="text-gray-300 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">0{i + 1}</p>
-                <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-cyan-neon transition-colors">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">{s.desc}</p>
-                <span className="text-cyan-neon text-xs font-semibold tracking-widest uppercase">Learn More →</span>
-              </Link>
+              <StaggerItem key={s.title}>
+                <Link href={s.href}
+                  className="group flex flex-col h-full p-8 rounded-2xl border border-gray-200 bg-white hover:border-cyan-neon/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <div className="w-10 h-0.5 mb-6 bg-cyan-neon group-hover:w-16 transition-all duration-300" />
+                  <p className="text-gray-300 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">0{i + 1}</p>
+                  <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-cyan-neon transition-colors">{s.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{s.desc}</p>
+                  <span className="text-cyan-neon text-xs font-semibold tracking-widest uppercase">Learn More →</span>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* 6. WHY LIMESOFT */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-14">
+          <ScrollReveal className="mb-14">
             <SectionLabel text="Why Limesoft?" />
             <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight max-w-xl">
               Built Different. Delivered Better.
             </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          </ScrollReveal>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {differentiators.map((d) => (
-              <div key={d.num}
-                className="group p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="text-white/10 text-4xl font-black mb-4 leading-none">{d.num}</div>
-                <h3 className="text-white font-bold mb-2 group-hover:text-cyan-neon transition-colors">{d.title}</h3>
-                <p className="text-white/45 text-sm leading-relaxed">{d.desc}</p>
-              </div>
+              <StaggerItem key={d.num}>
+                <div className="group h-full p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all duration-300">
+                  <div className="text-white/10 text-4xl font-black mb-4 leading-none group-hover:text-white/20 transition-colors">{d.num}</div>
+                  <h3 className="text-white font-bold mb-2 group-hover:text-cyan-neon transition-colors">{d.title}</h3>
+                  <p className="text-white/45 text-sm leading-relaxed">{d.desc}</p>
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* 7. OUR PROCESS — white section */}
+      {/* 7. OUR PROCESS — light section */}
       <section className="py-24 bg-[#fcfbfc]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <ScrollReveal className="text-center mb-16">
             <SectionLabel text="Our Approach" color="#0d9488"/>
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">How We Deliver</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          </ScrollReveal>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((p, i) => (
-              <div key={p.step} className="relative">
-                {i < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-7 left-full w-full h-px bg-gray-200 z-0" />
-                )}
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/8 flex items-center justify-center mb-5">
-                    <span className="text-teal-600 font-black text-sm">{p.step}</span>
+              <StaggerItem key={p.step}>
+                <div className="relative">
+                  {i < process.length - 1 && (
+                    <div className="hidden lg:block absolute top-7 left-full w-full h-px bg-gray-200 z-0" />
+                  )}
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-full border-2 border-cyan-neon/30 bg-cyan-neon/8 flex items-center justify-center mb-5">
+                      <span className="text-teal-600 font-black text-sm">{p.step}</span>
+                    </div>
+                    <h3 className="text-gray-900 font-bold text-lg mb-2">{p.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
                   </div>
-                  <h3 className="text-gray-900 font-bold text-lg mb-2">{p.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* 8. REFERENCE PROJECTS */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-14 gap-6">
+          <ScrollReveal className="flex items-end justify-between mb-14 gap-6">
             <div>
               <SectionLabel text="Our Work" />
               <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">Reference Projects</h2>
@@ -176,18 +187,19 @@ export default function HomePage() {
             <Link href="/services" className="hidden md:inline text-white/30 text-xs font-semibold tracking-widest uppercase hover:text-cyan-neon transition-colors shrink-0">
               All Services →
             </Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          </ScrollReveal>
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {projects.map((p) => (
-              <div key={p.client}
-                className="group p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-cyan-neon/20 transition-all duration-300">
-                <p className="text-cyan-neon text-[11px] font-black tracking-[0.3em] uppercase mb-4">{p.service}</p>
-                <p className="text-white/25 text-xs mb-2">{p.client}</p>
-                <h3 className="text-white font-bold leading-snug">{p.headline}</h3>
-                <div className="mt-6 h-px w-8 bg-cyan-neon/40 group-hover:w-16 transition-all duration-500" />
-              </div>
+              <StaggerItem key={p.client}>
+                <div className="group h-full p-8 rounded-2xl border border-white/8 bg-white/6 backdrop-blur-sm hover:bg-white/10 hover:border-cyan-neon/20 hover:-translate-y-1 transition-all duration-300">
+                  <p className="text-cyan-neon text-[11px] font-black tracking-[0.3em] uppercase mb-4">{p.service}</p>
+                  <p className="text-white/25 text-xs mb-2">{p.client}</p>
+                  <h3 className="text-white font-bold leading-snug">{p.headline}</h3>
+                  <div className="mt-6 h-px w-8 bg-cyan-neon/40 group-hover:w-16 transition-all duration-500" />
+                </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -198,24 +210,26 @@ export default function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(20,184,166,0.45), transparent)' }} />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <SectionLabel text="Get Started" />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
-            Move Forward with Confidence
-          </h2>
-          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Don&apos;t let security gaps or outdated infrastructure hold your business back. Let&apos;s build something secure, scalable, and future-ready.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact"
-              className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(20,184,166,0.35)] transition-shadow duration-300">
-              <span className="relative z-10">Talk to an Expert</span>
-              <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
-            </Link>
-            <Link href="/services"
-              className="rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white/70 font-semibold px-10 py-4 text-sm tracking-wide hover:border-white/40 hover:text-white hover:bg-white/10 transition-all duration-300">
-              View Services
-            </Link>
-          </div>
+          <ScrollReveal>
+            <SectionLabel text="Get Started" />
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 max-w-3xl mx-auto leading-tight">
+              Move Forward with Confidence
+            </h2>
+            <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+              Don&apos;t let security gaps or outdated infrastructure hold your business back. Let&apos;s build something secure, scalable, and future-ready.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact"
+                className="group relative overflow-hidden rounded-xl bg-cyan-neon text-[#0d1f3c] font-bold px-10 py-4 text-sm tracking-wide hover:shadow-[0_0_40px_rgba(20,184,166,0.35)] transition-shadow duration-300">
+                <span className="relative z-10">Talk to an Expert</span>
+                <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300" />
+              </Link>
+              <Link href="/services"
+                className="rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white/70 font-semibold px-10 py-4 text-sm tracking-wide hover:border-white/40 hover:text-white hover:bg-white/10 transition-all duration-300">
+                View Services
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
