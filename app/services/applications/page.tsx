@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import VendorTicker from '@/components/VendorTicker'
 import Carousel from '@/components/Carousel'
+import ParticleBackground from '@/components/ParticleBackground'
 
 const highlights = [
   { num: '01', label: 'Web', name: 'Custom Web Applications', desc: 'Performant, accessible web apps built with React and Next.js — from internal tools and admin dashboards to customer-facing platforms handling real production traffic.' },
@@ -16,7 +17,9 @@ const highlights = [
 
 export default function ApplicationsPage() {
   return (
-    <div className="bg-[#07111e]">
+    <div>
+      <ParticleBackground r={1} g={138} b={216} count={85} maxDist={100} speed={0.55} />
+      <div className="relative" style={{ zIndex: 1 }}>
 
       {/* ── HERO ── */}
       <section className="relative min-h-[90vh] flex flex-col overflow-hidden">
@@ -56,6 +59,9 @@ export default function ApplicationsPage() {
           </div>
         </div>
 
+        {/* gradient fade — hero to content */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, rgba(7,17,30,0.94))' }} />
+
         <div className="relative flex-1 max-w-5xl mx-auto px-6 lg:px-8 pt-36 flex flex-col justify-center pb-20 w-full">
           <nav className="flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-12">
             <Link href="/" className="hover:text-white/50 transition-colors">Home</Link>
@@ -88,6 +94,7 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
+      <div style={{ background: 'rgba(7,17,30,0.94)' }}>
       {/* ── VENDOR TICKER ── */}
       <div className="border-y border-white/8 bg-[#060d1a]">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 pt-5 pb-1">
@@ -176,6 +183,8 @@ export default function ApplicationsPage() {
           </div>
         </div>
       </section>
+      </div>{/* end dark wrap */}
+      </div>{/* end z-index 1 wrap */}
     </div>
   )
 }

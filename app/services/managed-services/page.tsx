@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import VendorTicker from '@/components/VendorTicker'
+import ParticleBackground from '@/components/ParticleBackground'
 
 export const metadata: Metadata = {
   title: 'Managed IT Services | Limesoft System',
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
 
 export default function ManagedServicesPage() {
   return (
-    <div className="bg-[#07111e]">
+    <div>
+      <ParticleBackground r={56} g={189} b={248} count={45} maxDist={125} speed={0.15} />
+      <div className="relative" style={{ zIndex: 1 }}>
 
       {/* ── HERO ── */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -27,6 +30,9 @@ export default function ManagedServicesPage() {
         <div className="absolute right-0 top-0 bottom-0 flex items-center pr-8 lg:pr-20 pointer-events-none select-none opacity-[0.05]">
           <Image src="/limesoft-shield.png" alt="" width={480} height={480} className="object-contain" />
         </div>
+
+        {/* gradient fade — hero to content */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, rgba(7,17,30,0.94))' }} />
 
         <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-10">
@@ -81,6 +87,7 @@ export default function ManagedServicesPage() {
         </div>
       </section>
 
+      <div style={{ background: 'rgba(7,17,30,0.94)' }}>
       {/* ── NETWORK OPERATIONS ── */}
       <section className="py-20 border-t border-white/8">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
@@ -288,6 +295,8 @@ export default function ManagedServicesPage() {
           </Link>
         </div>
       </section>
+      </div>{/* end dark wrap */}
+      </div>{/* end z-index 1 wrap */}
     </div>
   )
 }

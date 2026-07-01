@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import VendorTicker from '@/components/VendorTicker'
 import Carousel from '@/components/Carousel'
+import ParticleBackground from '@/components/ParticleBackground'
 
 const highlights = [
   {
@@ -40,7 +41,9 @@ const highlights = [
 
 export default function ManagedSecurityPage() {
   return (
-    <div className="bg-[#07111e]">
+    <div>
+      <ParticleBackground r={1} g={138} b={216} count={60} maxDist={145} speed={0.2} />
+      <div className="relative" style={{ zIndex: 1 }}>
 
       {/* ── HERO ── */}
       <section className="relative min-h-[90vh] flex flex-col overflow-hidden">
@@ -68,6 +71,9 @@ export default function ManagedSecurityPage() {
             </div>
           </div>
         </div>
+
+        {/* gradient fade — hero to content */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, rgba(7,17,30,0.94))' }} />
 
         <div className="relative flex-1 max-w-5xl mx-auto px-6 lg:px-8 pt-36 flex flex-col justify-center pb-20 w-full">
           <nav className="flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase text-white/20 mb-12">
@@ -100,6 +106,8 @@ export default function ManagedSecurityPage() {
           </div>
         </div>
       </section>
+
+      <div style={{ background: 'rgba(7,17,30,0.94)' }}>
 
       {/* ── VENDOR TICKER ── */}
       <div className="border-y border-white/8 bg-[#060d1a]">
@@ -193,6 +201,8 @@ export default function ManagedSecurityPage() {
           </div>
         </div>
       </section>
+      </div>{/* end dark wrap */}
+      </div>{/* end z-index 1 wrap */}
     </div>
   )
 }
