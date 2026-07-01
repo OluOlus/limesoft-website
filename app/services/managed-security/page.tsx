@@ -142,36 +142,6 @@ export default function ManagedSecurityPage() {
         </div>
       </section>
 
-      {/* ── DETAILED BREAKDOWN — flowing rows ── */}
-      <section className="border-t border-white/8">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="py-16">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-2" style={{ color: '#018ad8' }}>In Detail</p>
-            <h2 className="text-2xl md:text-3xl font-black text-white mb-14">Our security stack, broken down</h2>
-            <div className="divide-y divide-white/6">
-              {[
-                { area: 'Firewall & NGFW',   items: ['Palo Alto PAN-OS & Panorama', 'Fortinet FortiGate + FortiManager', 'Sophos XGS Firewall', 'Cisco Secure Firewall (FTD)'] },
-                { area: 'Zero Trust & VPN',  items: ['Palo Alto Prisma Access', 'Fortinet ZTNA', 'Cisco AnyConnect / Secure Client', 'Microsoft Entra Conditional Access'] },
-                { area: 'Endpoint',          items: ['Sophos Intercept X + XDR', 'Microsoft Defender for Endpoint', 'CrowdStrike Falcon', 'Patch management & device control'] },
-                { area: 'Cloud Security',    items: ['Microsoft Defender for Cloud', 'AWS Security Hub & GuardDuty', 'Prisma Cloud CSPM', 'IAM least-privilege & audit'] },
-                { area: 'Email & Web',       items: ['Microsoft Defender for M365', 'DMARC / DKIM / SPF enforcement', 'Sophos Email Security', 'Web filtering & URL categorisation'] },
-                { area: 'Certifications',    items: ['ISC2 Certified Members', 'PCNSE (Palo Alto)', 'Fortinet NSE 4–7', 'Sophos Certified Engineer', 'Cisco CCNP Security'] },
-              ].map(row => (
-                <div key={row.area} className="py-7 grid md:grid-cols-[200px_1fr] gap-4 items-start">
-                  <p className="text-white/35 text-sm font-semibold">{row.area}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {row.items.map(item => (
-                      <span key={item} className="text-white/55 text-sm px-3 py-1 rounded-lg border border-white/8 bg-white/3">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── RELATED + CTA ── */}
       <section className="py-16 border-t border-white/8">

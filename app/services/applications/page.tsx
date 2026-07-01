@@ -128,32 +128,6 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
-      {/* ── DETAILED BREAKDOWN ── */}
-      <section className="border-t border-white/8">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
-          <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-2" style={{ color: '#018ad8' }}>In Detail</p>
-          <h2 className="text-2xl md:text-3xl font-black text-white mb-14">Full technology stack</h2>
-          <div className="divide-y divide-white/6">
-            {[
-              { area: 'Frontend',       items: ['React 18+', 'Next.js 14 App Router', 'TypeScript', 'Tailwind CSS', 'React Native (mobile)'] },
-              { area: 'Backend',        items: ['Node.js / Express', 'Python / FastAPI', 'PostgreSQL & MySQL', 'MongoDB & Redis', 'GraphQL & REST'] },
-              { area: 'Cloud',          items: ['Amazon Web Services', 'Microsoft Azure', 'Docker & Kubernetes', 'Serverless (Lambda / Functions)', 'GitHub Actions & Azure DevOps'] },
-              { area: 'DevOps',         items: ['Terraform (IaC)', 'CI/CD pipelines', 'SAST security scanning', 'Blue-green & canary deploys', 'Observability stack'] },
-              { area: 'Integrations',   items: ['Microsoft 365 / Graph API', 'Paystack, Stripe, Flutterwave', 'Twilio / SendGrid', 'Salesforce, HubSpot', 'Cisco DevNet APIs'] },
-              { area: 'Delivery',       items: ['Agile / Scrum sprints', 'Fixed-price milestones', 'Discovery & scoping workshops', 'Post-launch support', 'Code handover & documentation'] },
-            ].map(row => (
-              <div key={row.area} className="py-7 grid md:grid-cols-[200px_1fr] gap-4 items-start">
-                <p className="text-white/35 text-sm font-semibold">{row.area}</p>
-                <div className="flex flex-wrap gap-2">
-                  {row.items.map(item => (
-                    <span key={item} className="text-white/55 text-sm px-3 py-1 rounded-lg border border-white/8 bg-white/3">{item}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── RELATED + CTA ── */}
       <section className="py-16 border-t border-white/8">

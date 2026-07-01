@@ -130,32 +130,6 @@ export default function InfrastructurePage() {
         </div>
       </section>
 
-      {/* ── DETAILED BREAKDOWN ── */}
-      <section className="border-t border-white/8">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
-          <p className="text-[11px] font-bold tracking-[0.3em] uppercase mb-2" style={{ color: '#38bdf8' }}>In Detail</p>
-          <h2 className="text-2xl md:text-3xl font-black text-white mb-14">Stack and certifications</h2>
-          <div className="divide-y divide-white/6">
-            {[
-              { area: 'Cloud',        items: ['Amazon Web Services', 'Microsoft Azure', 'Microsoft 365 / Entra ID', 'Azure Arc (Hybrid)', 'Terraform IaC'] },
-              { area: 'Networking',   items: ['Cisco Catalyst / Nexus / ISR', 'HPE Aruba switching & wireless', 'Juniper EX / QFX', 'MPLS & leased lines', 'BGP / OSPF / EIGRP'] },
-              { area: 'SD-WAN',       items: ['Cisco SD-WAN (Viptela)', 'Fortinet Secure SD-WAN', 'HPE Aruba SD-WAN', 'Direct internet breakout', 'Application-aware routing'] },
-              { area: 'Data Centre',  items: ['VMware vSphere / vSAN', 'Dell EMC storage', 'NetApp ONTAP', 'HA clustering & DR', 'Co-location planning'] },
-              { area: 'AI & DevOps',  items: ['GPU cluster design', 'NVMe-over-Fabrics', 'Ansible & Python automation', 'Cisco DevNet tooling', 'CI/CD infrastructure'] },
-              { area: 'Certifications', items: ['Cisco CCNP (Enterprise/DC)', 'Juniper JNCIA', 'AWS Solutions Architect', 'Azure Administrator', 'HPE Aruba Certified'] },
-            ].map(row => (
-              <div key={row.area} className="py-7 grid md:grid-cols-[200px_1fr] gap-4 items-start">
-                <p className="text-white/35 text-sm font-semibold">{row.area}</p>
-                <div className="flex flex-wrap gap-2">
-                  {row.items.map(item => (
-                    <span key={item} className="text-white/55 text-sm px-3 py-1 rounded-lg border border-white/8 bg-white/3">{item}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── RELATED + CTA ── */}
       <section className="py-16 border-t border-white/8">
