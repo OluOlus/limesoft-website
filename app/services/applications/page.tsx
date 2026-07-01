@@ -7,12 +7,12 @@ import Carousel from '@/components/Carousel'
 import ParticleBackground from '@/components/ParticleBackground'
 
 const highlights = [
-  { num: '01', label: 'Web', name: 'Custom Web Applications', desc: 'Performant, accessible web apps built with React and Next.js — from internal tools and admin dashboards to customer-facing platforms handling real production traffic.' },
-  { num: '02', label: 'Mobile', name: 'Mobile Applications', desc: 'Cross-platform iOS and Android apps in React Native — single codebase, device-native performance, offline capability, push notifications, and full app store delivery.' },
-  { num: '03', label: 'Enterprise', name: 'Enterprise & ERP Integration', desc: 'Connecting disparate enterprise systems — ERP, CRM, HR, finance — through robust API and integration layers that keep data consistent across your organisation.' },
-  { num: '04', label: 'APIs', name: 'API Design & Development', desc: 'Clean, versioned REST and GraphQL APIs with OpenAPI documentation, rate limiting, authentication, and monitoring — built as the backbone for every connected system.' },
-  { num: '05', label: 'Cloud-Native', name: 'Cloud-Native & DevOps', desc: 'Containerised applications on Kubernetes with CI/CD pipelines, infrastructure-as-code, automated testing, and observability built in from the start.' },
-  { num: '06', label: 'Legacy', name: 'Legacy Modernisation', desc: 'Systematic migration of legacy systems using strangler fig patterns — preserving business logic while replacing fragile, unmaintainable codebases with modern architectures.' },
+  { num: '01', label: 'Web', name: 'Custom Web Applications', desc: 'Performant, accessible web apps in React and Next.js. Internal tools, admin dashboards, and customer-facing platforms that handle real production traffic.' },
+  { num: '02', label: 'Mobile', name: 'Mobile Applications', desc: 'Cross-platform iOS and Android apps in React Native. Single codebase, native-feeling performance, offline capability, and full app store delivery.' },
+  { num: '03', label: 'Enterprise', name: 'Enterprise & ERP Integration', desc: 'Connecting ERP, CRM, HR, and finance systems through clean API and integration layers. Data stays consistent without manual reconciliation.' },
+  { num: '04', label: 'APIs', name: 'API Design & Development', desc: 'Versioned REST and GraphQL APIs with OpenAPI documentation, rate limiting, authentication, and monitoring. The backbone everything else connects to.' },
+  { num: '05', label: 'Cloud-Native', name: 'Cloud-Native & DevOps', desc: 'Containerised applications on Kubernetes with CI/CD pipelines, infrastructure-as-code, automated testing, and observability from day one.' },
+  { num: '06', label: 'Legacy', name: 'Legacy Modernisation', desc: 'Migrating legacy systems using strangler fig patterns. Business logic preserved, fragile codebases replaced with architectures that can be maintained.' },
 ]
 
 export default function ApplicationsPage() {
@@ -81,7 +81,7 @@ export default function ApplicationsPage() {
             </span>
           </h1>
           <p className="text-white/45 text-lg max-w-sm leading-relaxed mb-10">
-            React, Next.js, Node.js, and cloud-native engineering — building web, mobile, and enterprise applications that fit how you actually work.
+            React, Next.js, Node.js, and cloud-native engineering. Web, mobile, and enterprise apps built around how you work.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/contact" className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-xl text-sm hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #018ad8, #0179c0)' }}>
@@ -175,7 +175,7 @@ export default function ApplicationsPage() {
           <div className="rounded-2xl border border-[#018ad8]/20 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6" style={{ background: 'rgba(1,138,216,0.06)' }}>
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-white mb-1.5">Have a project in mind?</h2>
-              <p className="text-white/35 text-sm">Tell us what you need — we scope it, design it, and deliver it on time.</p>
+              <p className="text-white/35 text-sm">Tell us what you need. We scope it, design it, and ship it.</p>
             </div>
             <Link href="/contact" className="shrink-0 text-white font-semibold px-8 py-3.5 rounded-xl text-sm hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #018ad8, #0179c0)' }}>
               Start the Conversation

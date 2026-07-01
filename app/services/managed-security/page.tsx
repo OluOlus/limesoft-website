@@ -10,32 +10,32 @@ const highlights = [
   {
     num: '01', label: 'Perimeter Defence',
     name: 'Next-Generation Firewalls',
-    desc: 'Deep packet inspection, application-layer policy, SSL decryption, and live threat intelligence — delivered on Palo Alto, Fortinet, Sophos, and Cisco platforms. We design, deploy, and manage your NGFW estate so threats are stopped before they land.',
+    desc: 'Deep packet inspection, application-layer policy, SSL decryption, and live threat feeds on Palo Alto, Fortinet, Sophos, and Cisco platforms. We design, deploy, and manage your NGFW estate.',
   },
   {
     num: '02', label: 'Zero Trust',
     name: 'Zero Trust Network Access',
-    desc: 'Every access request verified by identity, device posture, and real-time risk signals — not by IP address or network location. We replace broad VPN tunnels with application-specific controls that follow your users anywhere they work.',
+    desc: 'Access verified by identity, device posture, and live risk signals. Not by IP address. We replace broad VPN tunnels with application-specific controls that travel with your users.',
   },
   {
     num: '03', label: 'Endpoint & XDR',
     name: 'EDR / XDR Detection & Response',
-    desc: 'Behavioural AI that spots threat patterns across endpoints, email, cloud, and network telemetry — correlating signals that point-solution tools miss. Sophos Intercept X, Microsoft Defender, and CrowdStrike, configured and monitored by our team.',
+    desc: 'Behavioural AI across endpoints, email, cloud, and network telemetry. Correlating signals that single-product tools miss. Sophos Intercept X, Microsoft Defender, and CrowdStrike, run by our team.',
   },
   {
     num: '04', label: 'Cloud Security',
     name: 'Cloud Security Posture Management',
-    desc: 'Continuous scanning of your AWS and Azure environments for misconfigurations, over-privileged identities, and exposed services — before attackers find them. Aligned to CIS benchmarks and integrated with your DevOps pipeline.',
+    desc: 'Continuous scanning of AWS and Azure for misconfigurations, over-privileged identities, and exposed services. Aligned to CIS benchmarks and wired into your DevOps pipeline.',
   },
   {
     num: '05', label: 'Identity',
     name: 'Identity & Access Management',
-    desc: 'MFA, Conditional Access, and Privileged Identity Management built on Microsoft Entra ID and Cisco ISE. The access control foundation that underpins every other security control in your environment.',
+    desc: 'MFA, Conditional Access, and Privileged Identity Management on Microsoft Entra ID and Cisco ISE. Access control built as a foundation, not an afterthought.',
   },
   {
     num: '06', label: 'Testing',
     name: 'Penetration Testing & Red Team',
-    desc: 'ISC2 and certified ethical hackers simulating real adversary behaviour — testing your network, web applications, staff phishing susceptibility, and physical controls. You get a detailed finding report and a remediation roadmap.',
+    desc: 'ISC2-certified ethical hackers testing your network, web applications, staff phishing susceptibility, and physical controls. You get a clear findings report and a remediation plan you can actually follow.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function ManagedSecurityPage() {
             </span>
           </h1>
           <p className="text-white/45 text-lg max-w-sm leading-relaxed mb-10">
-            Palo Alto, Sophos, Fortinet, and Cisco certified engineers — protecting your perimeter, endpoints, cloud, and identity.
+            Certified across Palo Alto, Sophos, Fortinet, and Cisco. We protect your perimeter, endpoints, cloud, and identity.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/contact" className="inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-xl text-sm hover:opacity-90 transition-opacity" style={{ background: 'linear-gradient(135deg, #018ad8, #0179c0)' }}>

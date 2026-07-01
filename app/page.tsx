@@ -7,7 +7,7 @@ const services = [
   {
     num: '01',
     title: 'Managed Security',
-    desc: 'Next-gen firewalls, Zero Trust, penetration testing, EDR/XDR, cloud security, and Microsoft 365 security — keeping your organisation protected.',
+    desc: 'Next-gen firewalls, Zero Trust, penetration testing, EDR/XDR, and cloud security. Serious protection, properly implemented.',
     href: '/services/managed-security',
     accent: '#018ad8',
   },
@@ -21,7 +21,7 @@ const services = [
   {
     num: '03',
     title: 'Applications',
-    desc: 'Custom web and mobile applications, enterprise integrations, cloud-native development, and legacy modernisation — built for your workflows.',
+    desc: 'Custom web and mobile apps, enterprise integrations, cloud-native development, and legacy modernisation.',
     href: '/services/applications',
     accent: '#018ad8',
   },
@@ -35,18 +35,18 @@ const services = [
 ]
 
 const differentiators = [
-  { num: '01', title: 'Globally Certified',        desc: 'CCNP, PCNSE, ISC2, ITIL v4, PMP, PRINCE2 — credentials backed by real-world delivery.' },
+  { num: '01', title: 'Globally Certified',        desc: 'CCNP, PCNSE, ISC2, ITIL v4, PMP, PRINCE2. Credentials that back up what we say.' },
   { num: '02', title: 'Pan-African + UK Presence',  desc: 'Local teams in Lagos, South Yorkshire, Douala, and Kigali. International standards everywhere.' },
-  { num: '03', title: 'Vendor-Agnostic',             desc: 'Cisco, Palo Alto, Fortinet, AWS, Microsoft — we recommend what fits you, not what pays us.' },
-  { num: '04', title: 'End-to-End Delivery',         desc: 'Design, implementation, and ongoing management — one partner for your full technology lifecycle.' },
-  { num: '05', title: 'Client-First Approach',       desc: 'Your success is our metric. We stay with you through every phase and beyond go-live.' },
-  { num: '06', title: 'Flexible Methodology',        desc: 'Waterfall, Agile, or Hybrid — certified project managers select the right model for each engagement.' },
+  { num: '03', title: 'Vendor-Agnostic',             desc: 'We work with Cisco, Palo Alto, Fortinet, AWS, and Microsoft. We recommend what fits, not what pays.' },
+  { num: '04', title: 'End-to-End Delivery',         desc: 'Design, build, and ongoing management under one roof. No handoffs, no gaps.' },
+  { num: '05', title: 'Client-First Approach',       desc: 'Your outcome is our measure. We stay engaged beyond go-live.' },
+  { num: '06', title: 'Flexible Methodology',        desc: 'Waterfall, Agile, or Hybrid. Certified project managers pick the right fit for each job.' },
 ]
 
 const process = [
   { step: '01', title: 'Assess',    desc: 'We audit your current environment, identify gaps, and define requirements.' },
-  { step: '02', title: 'Design',    desc: 'Our architects design a tailored solution aligned to your goals and budget.' },
-  { step: '03', title: 'Implement', desc: 'Certified engineers deploy and configure — with minimal disruption to operations.' },
+  { step: '02', title: 'Design',    desc: 'Our architects map out a solution matched to your goals and budget.' },
+  { step: '03', title: 'Implement', desc: 'Certified engineers deploy and configure with minimal disruption.' },
   { step: '04', title: 'Support',   desc: 'Ongoing managed services, monitoring, and advisory to keep you secure and optimised.' },
 ]
 

@@ -56,7 +56,7 @@ export default function ManagedServicesPage() {
             </span>
           </h1>
           <p className="text-white/45 text-lg max-w-2xl leading-relaxed mb-12">
-            The ongoing expertise, monitoring, and structured service management your organisation needs — without the overhead of building specialist teams for every domain.
+            The expertise, monitoring, and service management you need, without building specialist teams for every domain.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-16">
@@ -106,13 +106,13 @@ export default function ManagedServicesPage() {
               {
                 label: 'Network Ops',
                 name: 'Managed Networks',
-                desc: 'Proactive monitoring, performance optimisation, and fault management of your network infrastructure — reducing downtime before users feel it.',
+                desc: 'Proactive monitoring, performance optimisation, and fault management. We catch issues before your users do.',
                 bullets: ['24/7 NOC monitoring', 'Performance & capacity reporting', 'Configuration management', 'Change & incident handling (ITIL)', 'Vendor liaison & escalation'],
               },
               {
                 label: 'Security Ops',
                 name: 'Managed Firewall',
-                desc: 'Policy management, firmware updates, rule reviews, and 24/7 alerting on your NGFW estate — you stay protected without managing it yourself.',
+                desc: 'Policy management, firmware updates, rule reviews, and 24/7 alerting on your NGFW estate. You stay protected; we handle the upkeep.',
                 bullets: ['Palo Alto, Fortinet, Sophos, Cisco', 'Policy review & rule hygiene', 'Firmware & signature updates', 'Threat alert triage & response', 'Monthly security reporting'],
               },
             ].map((item) => (
@@ -200,13 +200,13 @@ export default function ManagedServicesPage() {
               {
                 label: 'Project Delivery',
                 name: 'Project Management',
-                desc: 'PMP and PRINCE2-certified project managers delivering technology projects on time and within budget — with full stakeholder visibility at every stage.',
+                desc: 'PMP and PRINCE2-certified project managers who deliver on time and within budget, with clear reporting at every milestone.',
                 bullets: ['Waterfall, Agile, and Hybrid delivery', 'Scope, risk & issue management', 'Stakeholder reporting & governance', 'Budget tracking & forecasting', 'Post-implementation review'],
               },
               {
                 label: 'Service Mgmt',
                 name: 'ITIL Service Management',
-                desc: 'Incident, change, and problem management aligned to ITIL v4 best practice — structured, repeatable, and auditable IT service delivery across your organisation.',
+                desc: 'Incident, change, and problem management aligned to ITIL v4. Structured, repeatable processes your auditors can follow.',
                 bullets: ['Incident & major incident management', 'Change advisory board (CAB) process', 'Problem management & root cause', 'Service catalogue management', 'SLA reporting & escalation paths'],
               },
             ].map((item) => (

@@ -7,12 +7,12 @@ import Carousel from '@/components/Carousel'
 import ParticleBackground from '@/components/ParticleBackground'
 
 const highlights = [
-  { num: '01', label: 'Cloud', name: 'AWS & Azure Cloud', desc: 'Landing zones, account vending, networking, compute, managed databases, containers, and disaster recovery — designed for your workloads, governed from day one.' },
-  { num: '02', label: 'Productivity', name: 'Microsoft 365', desc: 'Exchange Online, Teams, SharePoint, OneDrive, Intune, Entra ID, Defender, and Purview — migrated, configured, secured, and supported by M365-certified engineers.' },
-  { num: '03', label: 'Networking', name: 'Enterprise Networking', desc: 'Campus LAN, WAN, and branch architecture on Cisco, HPE Aruba, and Juniper — built for performance, resilience, and security at every layer.' },
-  { num: '04', label: 'SD-WAN', name: 'SD-WAN & Wireless', desc: 'Software-defined WAN connecting offices, cloud workloads, and remote users with application-aware routing, direct internet breakout, and full per-site visibility.' },
-  { num: '05', label: 'Data Centre', name: 'Data Centre Design', desc: 'Physical and virtual data centre design for high availability and business continuity — including virtualisation, storage, and disaster recovery architectures.' },
-  { num: '06', label: 'AI Infra', name: 'AI-Ready Infrastructure', desc: 'GPU clusters, NVMe-over-Fabrics, high-bandwidth networking, and MLOps foundations — purpose-built for training and inference at scale.' },
+  { num: '01', label: 'Cloud', name: 'AWS & Azure Cloud', desc: 'Landing zones, account vending, networking, compute, managed databases, containers, and disaster recovery. Properly governed from the first resource, not bolted on later.' },
+  { num: '02', label: 'Productivity', name: 'Microsoft 365', desc: 'Exchange Online, Teams, SharePoint, Intune, Entra ID, Defender, and Purview. Migrated, configured, secured, and supported by M365-certified engineers.' },
+  { num: '03', label: 'Networking', name: 'Enterprise Networking', desc: 'Campus LAN, WAN, and branch architecture on Cisco, HPE Aruba, and Juniper. Performance and security designed in from the ground up.' },
+  { num: '04', label: 'SD-WAN', name: 'SD-WAN & Wireless', desc: 'Software-defined WAN connecting offices, cloud, and remote users with application-aware routing, direct internet breakout, and per-site visibility.' },
+  { num: '05', label: 'Data Centre', name: 'Data Centre Design', desc: 'Physical and virtual data centre design for high availability and business continuity. Virtualisation, storage, and DR architectures that hold up under pressure.' },
+  { num: '06', label: 'AI Infra', name: 'AI-Ready Infrastructure', desc: 'GPU clusters, NVMe-over-Fabrics, high-bandwidth networking, and MLOps foundations built for training and inference at scale.' },
 ]
 
 export default function InfrastructurePage() {

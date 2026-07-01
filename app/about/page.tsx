@@ -157,7 +157,7 @@ export default function AboutPage() {
               <p className="text-cyan-neon text-[10px] tracking-[0.4em] uppercase font-bold mb-4">02 / Key Facts</p>
               <h2 className="text-4xl font-black mb-4">Limesoft by the numbers.</h2>
               <p className="text-white/40 text-lg mb-14 max-w-lg">
-                We are vendor-agnostic by principle — our recommendations serve you, not our margins.
+                We are vendor-agnostic by principle. Our recommendations serve your needs, not our margins.
               </p>
 
               <div className="grid grid-cols-2 gap-px bg-white/8 rounded-2xl overflow-hidden mb-10">
@@ -183,15 +183,13 @@ export default function AboutPage() {
                 <div className="rounded-2xl bg-white/5 border border-white/10 p-8">
                   <p className="text-cyan-neon text-[10px] tracking-[0.4em] uppercase font-bold mb-4">Mission</p>
                   <p className="text-white/70 leading-relaxed">
-                    To deliver <span className="text-white font-semibold">intelligent, secure, and scalable</span> technology
-                    solutions through expert collaboration, relentless innovation, and an unwavering commitment to excellence.
+                    To build and secure technology that works for our clients — not just on paper, but in production, under pressure, in real conditions.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-white/5 border border-white/10 p-8">
                   <p className="text-[#38bdf8] text-[10px] tracking-[0.4em] uppercase font-bold mb-4">Vision</p>
                   <p className="text-white/70 leading-relaxed">
-                    To become the <span className="text-white font-semibold">No.1 trusted catalyst</span> for intelligent
-                    and secure digital transformation across every territory we serve.
+                    To be the partner organisations across Africa and the UK turn to first when technology decisions matter most.
                   </p>
                 </div>
               </div>
@@ -202,7 +200,7 @@ export default function AboutPage() {
               <p className="text-cyan-neon text-[10px] tracking-[0.4em] uppercase font-bold mb-4">03 / What We Do</p>
               <h2 className="text-4xl font-black mb-4">Four practice areas. One partner.</h2>
               <p className="text-white/40 mb-14 text-lg max-w-lg">
-                From perimeter security to custom software — we cover every dimension of your technology estate.
+                From perimeter security to custom software, we work across your full technology estate.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
@@ -233,9 +231,9 @@ export default function AboutPage() {
               <h2 className="text-4xl font-black mb-14">What we stand for.</h2>
               <div className="space-y-0 divide-y divide-white/8">
                 {[
-                  { num: '01', title: 'Innovation & Excellence', desc: 'We stay at the forefront of technology so our clients always benefit from the best the industry has to offer — delivered with precision and care.' },
-                  { num: '02', title: 'Integrity',               desc: 'Honesty, transparency, and accountability in every interaction. Our clients trust us with their critical infrastructure and we take that seriously.' },
-                  { num: '03', title: 'Customer Obsession',      desc: 'We measure our success by our customers\' success — from the first call to long-term managed service partnerships and everything in between.' },
+                  { num: '01', title: 'Innovation & Excellence', desc: 'We keep pace with the industry so clients get access to the right tools and approaches, not last year\'s defaults.' },
+                  { num: '02', title: 'Integrity',               desc: 'Honesty, transparency, and accountability in every interaction. Our clients trust us with critical infrastructure and we take that seriously.' },
+                  { num: '03', title: 'Client Focus',            desc: 'Our measure of success is yours. That starts from the first call and runs through every ticket and renewal.' },
                 ].map((v) => (
                   <div key={v.num} className="py-8 grid md:grid-cols-12 gap-6 items-center group cursor-default hover:bg-white/5 -mx-4 px-4 rounded-xl transition-colors duration-200">
                     <span className="md:col-span-1 text-xs font-mono text-white/20 group-hover:text-cyan-neon transition-colors duration-200">{v.num}</span>

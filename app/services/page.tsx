@@ -62,7 +62,7 @@ const infrastructurePlatforms = [
   },
   {
     name: 'Enterprise Networking',
-    desc: 'Campus, branch, and WAN architecture using Cisco, HPE Aruba, and Juniper platforms — SD-WAN, SD-WLAN, and network automation included.',
+    desc: 'Campus, branch, and WAN architecture on Cisco, HPE Aruba, and Juniper platforms. SD-WAN, SD-WLAN, and network automation included.',
   },
   {
     name: 'Data Centre Solutions',
@@ -73,7 +73,7 @@ const infrastructurePlatforms = [
 const applicationCapabilities = [
   {
     name: 'Custom Web Applications',
-    desc: 'Full-stack development using modern frameworks — React, Next.js, Node.js — tailored to your workflows.',
+    desc: 'Full-stack development in React, Next.js, and Node.js. Built around how your team actually works.',
   },
   {
     name: 'Mobile Applications',
@@ -108,7 +108,7 @@ const managedCapabilities = [
   },
   {
     name: 'IT Consulting',
-    desc: 'Strategic technology advisory — roadmaps, vendor selection, architecture reviews, and technology due diligence.',
+    desc: 'Technology advisory covering roadmaps, vendor selection, architecture reviews, and due diligence.',
   },
   {
     name: 'Project Management',
@@ -120,7 +120,7 @@ const managedCapabilities = [
   },
   {
     name: 'SLA-backed Support',
-    desc: 'Defined response times and escalation paths — you always know who to call and what to expect.',
+    desc: 'Defined response times and escalation paths. You always know who to call.',
   },
 ]
 
@@ -273,7 +273,7 @@ export default function ServicesPage() {
               <p className="text-cyan-neon text-[11px] font-bold tracking-[0.3em] uppercase mb-1">03</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Applications</h2>
               <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
-                Custom software and enterprise-grade applications built around your workflows — not the other way around.
+                Custom software built around how your teams work.
               </p>
             </div>
           </div>
@@ -304,7 +304,7 @@ export default function ServicesPage() {
               <p className="text-cyan-neon text-[11px] font-bold tracking-[0.3em] uppercase mb-1">04</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Managed Services</h2>
               <p className="text-gray-500 text-base leading-relaxed max-w-2xl">
-                Ongoing expertise, monitoring, and support — so your technology keeps running at its best
+                Ongoing expertise, monitoring, and support to keep your technology running.
                 without the overhead of an in-house team for every domain.
               </p>
             </div>
@@ -332,7 +332,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-gray-500 leading-relaxed max-w-md">
               Our experts will assess your environment and point you in the right direction.
-              No commitment — just an honest conversation.
+              No commitment. Just a conversation.
             </p>
           </div>
           <div className="flex flex-col gap-3 shrink-0">
